@@ -1,6 +1,6 @@
 const fs = require('fs'); 
 
-const path = `D:/Kim/Workout/JS/EnglishQuiz/answers.csv`
+const path = `answers.csv`
 const contents = fs.readFileSync(path).toString();
 
 const lines = contents.split(`\r\n`)
