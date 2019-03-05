@@ -1,14 +1,13 @@
-const answers = require('./answers'); 
+const sentences = require('./answers'); 
 
-let chooseRandoms = (total, numberToChoose) => {
-    let available = range(0, total)
+let chooseRandoms = (items, numberToChoose) => {
     let result = []
 
     while (result.length < numberToChoose){
-        let position = randomInteger(available.length - 1)
-        let element = available[position]
+        let position = randomInteger(items.length - 1)
+        let element = items[position]
 
-        available.splice(position, 1)
+        items.splice(position, 1)
 
         result.push(element)        
     }
@@ -34,12 +33,53 @@ let range = (from, to) => {
 let randomInteger = (max) => 
     Math.abs(Math.round(Math.random() * (max + 1) - 0.5))
 
+const deleteAt = (array, position) => { 
+    const copy = array.slice()
+    const deleted = copy.splice(position, 1)
 
-for (const key in answers) {
-    if (answers.hasOwnProperty(key)) {
-
-        const element = answers[key];
-    }
+    return copy
 }
 
-console.log(chooseRandoms(35, 20));
+const insertAt = (array, item, position) => {
+    let result = array.slice()
+
+    result.splice(position, 0, item)
+
+    return result
+}
+
+let onlyQuestions = [];
+for (const key in sentences) {
+    if (sentences.hasOwnProperty(key)) { 
+        onlyQuestions.push(sentences[key])  
+    }
+}
+console.log(onlyQuestions);
+
+let onlyAnswers = [];
+for (const key in sentences) {
+    if (sentences.hasOwnProperty(key)) {        
+        onlyAnswers.push(key)  
+    }
+}
+console.log(onlyAnswers);
+
+const quizQuestionsNumber = 5
+const quizOptionsNumber = 4
+
+const positions = range(0, onlyQuestions.length - 1)
+const chosenPositions = chooseRandoms(positions, quizQuestionsNumber)
+const quiz = chosenPositions
+    .map(pos => ({
+        index: pos, 
+        question: onlyQuestions[pos],
+        corretAnswer: onlyAnswers[pos],
+        answerOptions: insertAt(
+            chooseRandoms(deleteAt(onlyAnswers, pos), quizOptionsNumber - 1),
+            onlyAnswers[pos],
+            randomInteger(quizOptionsNumber - 1))
+    }))
+
+
+
+console.log(quiz);
