@@ -5,7 +5,7 @@ let chooseRandoms = (total, numberToChoose) => {
     let result = []
 
     while (result.length < numberToChoose){
-        let position = randomInteger(available.length)
+        let position = randomInteger(available.length - 1)
         let element = available[position]
 
         available.splice(position, 1)
@@ -34,13 +34,12 @@ let range = (from, to) => {
 let randomInteger = (max) => 
     Math.abs(Math.round(Math.random() * (max + 1) - 0.5))
 
-let index = 0
+
 for (const key in answers) {
     if (answers.hasOwnProperty(key)) {
-        //console.log(index++);
-        
+
         const element = answers[key];
     }
 }
 
-console.log(chooseRandoms(35, 5));
+console.log(chooseRandoms(35, 20));
