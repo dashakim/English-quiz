@@ -29,10 +29,11 @@ export const swap = (array, index1, index2) => {
     array[index1] = array[index2]
     array[index2] = swapped
 }
+
 export const append = (array, el) => {
     const result = array.slice()
     result.push(el)
-    
+
     return result
 }
 

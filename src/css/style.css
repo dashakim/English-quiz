@@ -4,3 +4,11 @@ body{
 h1{
     color:rgb(211, 187, 55);
 }
+
+.answers{
+    display: flex
+}
+
+.answer {
+    margin: 5px
+}

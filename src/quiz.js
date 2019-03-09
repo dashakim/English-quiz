@@ -19,12 +19,11 @@ export const generateQuiz = (data, questionsNumber, answersNumber) => {
         const item = {
             index: pos,
             question: allQuestions[pos],
-            corretAnswer: allAnswers[pos],
+            correсtAnswer: allAnswers[pos],
             answers: answers
         }
 
         result.push(item)
-
     }
 
     return result
