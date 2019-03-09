@@ -10,7 +10,7 @@ const renderQuiz = (placeholder, index) => {
 
     let question = quiz[index]
     let body = `<h1>Question: ${question.question}?<br></h1>`;
-    for (const answer of question.answerOptions) {
+    for (const answer of question.answers) {
         body += renderAnswer(answer, question.corretAnswer)
     }
 

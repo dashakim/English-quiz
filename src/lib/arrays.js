@@ -29,6 +29,12 @@ export const swap = (array, index1, index2) => {
     array[index1] = array[index2]
     array[index2] = swapped
 }
+export const append = (array, el) => {
+    const result = array.slice()
+    result.push(el)
+    
+    return result
+}
 
 export const shuffle = (array) => {
     for (let index = array.length - 1; index >= 0; index--) {
