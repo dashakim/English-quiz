@@ -1,3 +1,5 @@
+import { integer as randomInteger } from './random'
+
 export const range = (from, to) => {
     let start = from
     let result = []
@@ -20,4 +22,18 @@ export const insertAt = (array, item, position) => {
     result.splice(position, 0, item)
 
     return result
+}
+
+export const swap = (array, index1, index2) => {
+    const swapped = array[index1]
+    array[index1] = array[index2]
+    array[index2] = swapped
+}
+
+export const shuffle = (array) => {
+    for (let index = array.length - 1; index >= 0; index--) {
+        swap(array, index, randomInteger(index))
+    }
+
+    return array
 }

@@ -8,16 +8,26 @@ export const generateQuiz = (data, quizQuestionsNumber, quizOptionsNumber) => {
     const positions = arrays.range(0, onlyQuestions.length - 1)
     const chosenPositions = random.choose(positions, quizQuestionsNumber)
 
-    const quiz = chosenPositions
-        .map(pos => ({
+    const result = []
+
+    for (const pos of chosenPositions) {
+        const wrongAnswers = random.choose(arrays.deleteAt(onlyAnswers, pos), quizOptionsNumber - 1);
+        
+        const answers = wrongAnswers.slice()
+        answers.push(onlyAnswers[pos])
+
+        const answerOptions = arrays.shuffle(answers)
+
+        const item = {
             index: pos,
             question: onlyQuestions[pos],
             corretAnswer: onlyAnswers[pos],
-            answerOptions: arrays.insertAt(
-                random.choose(arrays.deleteAt(onlyAnswers, pos), quizOptionsNumber - 1),
-                onlyAnswers[pos],
-                random.integer(quizOptionsNumber - 1))
-        }))
+            answerOptions: answerOptions
+        }
 
-    return quiz
+        result.push(item)
+
+    }
+
+    return result
 }
