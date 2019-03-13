@@ -1,11 +1,9 @@
 import './css/style.css'
 import data from './sentences'
 import { generateQuiz } from './quiz'
-import { h1, text, br, div, button, setInner, ref, renderTo } from './lib/dom'
+import { ref, renderTo } from './lib/dom'
 import complete from './components/complete'
-import choice from './components/choice'
-import question from './components/question'
-import choices from './components/choices'
+import round from './components/round'
 
 const quiz = generateQuiz(data, 2, 4)
 
@@ -15,19 +13,17 @@ const renderQuiz = (placeholder, index) => {
             complete())
 
     let questionItem = quiz[index]
-    let questionTitle = question(questionItem.question)
-    let onclick = (e) => {
-        (e === questionItem.correсtAnswer) 
-            ? alert(`Ty top!`)
-            : alert(`You answered: ${e}, but correct was: ${questionItem.correсtAnswer}`)
-        renderQuiz(out, ++index)
-    }
-
-    let answers = div(`answers`, ...choices(questionItem.answers, onclick))
 
     renderTo(placeholder)(
-        questionTitle, 
-        answers)
+        round(questionItem.question, questionItem.answers, onAnswerClick(questionItem.correсtAnswer))
+    )
+}
+
+let onAnswerClick = (correctAnswer) => (e) => {
+    (e === correctAnswer) 
+        ? alert(`Ty top!`)
+        : alert(`You answered: ${e}, but correct was: ${correctAnswer}`)
+    renderQuiz(out, ++index)
 }
 
 const out = ref('out')

@@ -1,7 +1,7 @@
 import { h1, text } from '../lib/dom'
 
 const complete = () =>
-    h1(
+    h1({},
         text(`Aaaa, vi iz anglii!`), 
         text(` :)`))
 

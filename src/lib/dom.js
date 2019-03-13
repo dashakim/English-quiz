@@ -11,21 +11,24 @@ export const renderTo = (where) => {
     return (...inner) => setInner(where, ...inner)
 }
 
-export const button = (onclick, ...inner) => {
+export const button = (properties, ...inner) => {
     const el = document.createElement(`button`)
-    el.onclick = onclick
+    Object.assign(el, properties)
 
     return appendInner(el, inner)
 }
 
-export const div = (className, ...inner) => {
+export const div = (properties, ...inner) => {
     const el = document.createElement(`div`)
-    el.className = className
+    Object.assign(el, properties)
+
     return appendInner(el, inner);
 }
 
-export const h1 = (...inner) => {
+export const h1 = (properties, ...inner) => {
     const el = document.createElement(`h1`)
+    Object.assign(el, properties)
+
     return appendInner(el, inner);
 }
 
