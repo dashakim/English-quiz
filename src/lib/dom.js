@@ -1,6 +1,6 @@
 export const setInner = (node, ...inner) => {
     clear(node)
-    return appendInner(node, inner)    
+    return appendInner(node, inner)
 }
 
 export const ref = (id) => {

@@ -29,7 +29,8 @@ h1 {
     justify-content: center;
 }
 
-.answer-button, .next-button {
+.answer-button,
+.next-button {
     font-size: 16pt;
     line-height: 1.499;
     position: relative;
@@ -39,9 +40,8 @@ h1 {
     text-align: center;
     background-image: none;
     border: 1px solid transparent;
-    
-    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
-    box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
     cursor: pointer;
     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
@@ -57,5 +57,4 @@ h1 {
     border-radius: 4px;
     color: rgba(0, 0, 0, 0.924);
     background-color: rgb(231, 181, 15);
-   
 }

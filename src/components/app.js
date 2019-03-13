@@ -12,7 +12,7 @@ const app = (state, onAnswerClick, onNext) => {
         result = round(roundData.question, roundData.answers, state.hasAnswered, state.currentAnswer, state.currentCorrectAnswer, onAnswerClick(roundData.correсtAnswer), onNext)
     }
 
-    return  div({className: `app`}, result)
+    return div({ className: `app` }, result)
 }
 
 export default app

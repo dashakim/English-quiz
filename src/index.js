@@ -22,14 +22,14 @@ let onAnswerClick = (correctAnswer) => (answer) => {
     state.hasAnswered = true
     state.currentCorrectAnswer = correctAnswer
     state.currentAnswer = answer
-    
+
     renderQuiz(out, state)
 }
 
 let onNext = () => {
     state.hasAnswered = false
     state.round += 1
-    
+
     renderQuiz(out, state)
 }
 
