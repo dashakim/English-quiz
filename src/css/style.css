@@ -1,14 +1,61 @@
-body{
-    background-color:rgb(46, 45, 45);
-}
-h1{
-    color:rgb(211, 187, 55);
+body {
+    /* background-color: rgb(36, 35, 35); */
+    background-color: #222;
 }
 
-.answers{
-    display: flex
+h1 {
+    color: rgb(211, 187, 55);
+}
+
+.app {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.answers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .answer {
-    margin: 5px
+    margin-right: 20px;
+}
+
+.round-result {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-button, .next-button {
+    font-size: 16pt;
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.924);
+    background-color: rgb(231, 181, 15);
+   
 }
