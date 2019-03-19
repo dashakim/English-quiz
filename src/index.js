@@ -12,13 +12,15 @@ const state = {
     currentAnswer: ``
 }
 
+let out = {}
+
 const renderQuiz = (placeholder, state) => {
     renderTo(placeholder)(
         app(state, onAnswerClick, onNext)
     )
 }
 
-let onAnswerClick = (correctAnswer) => (answer) => {
+const onAnswerClick = (correctAnswer) => (answer) => {
     state.hasAnswered = true
     state.currentCorrectAnswer = correctAnswer
     state.currentAnswer = answer
@@ -26,14 +28,32 @@ let onAnswerClick = (correctAnswer) => (answer) => {
     renderQuiz(out, state)
 }
 
-let onNext = () => {
+const onNext = () => {
     state.hasAnswered = false
     state.round += 1
 
     renderQuiz(out, state)
 }
 
+const onActionHappened = (actionHandler) => {
+    actionHandler()
+    
+    renderQuiz(out, state)
+}
 
-const out = ref('out')
 
-renderQuiz(out, state)
+
+
+
+
+
+
+
+
+const onLoad = () => {
+    out = ref('out')
+
+    renderQuiz(out, state)
+}
+
+window.onload = onLoad
