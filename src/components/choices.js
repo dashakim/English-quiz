@@ -1,7 +1,9 @@
 import choice from './choice'
+import AnswerClick from '../actions/answerClick'
 
-const choices = (answers, onclick) => {
-    return answers.map(a => choice(a, () => onclick(a)))
+const choices = (signal, answers, correctAnswer) => {
+    return answers.map(a => 
+        choice(a, signal(new AnswerClick(correctAnswer, a))))
 }
 
 export default choices

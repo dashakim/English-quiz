@@ -3,8 +3,10 @@ import data from './sentences'
 import { generateQuiz } from './quiz'
 import { ref, renderTo } from './lib/dom'
 import app from './components/app'
+import AnswerClick from './actions/answerClick'
+import NextClick from './actions/nextClick'
 
-const state = {
+let state = {
     quiz: generateQuiz(data, 2, 4),
     round: 0,
     hasAnswered: false,
@@ -12,48 +14,37 @@ const state = {
     currentAnswer: ``
 }
 
-let out = {}
+const update = (model, message) => {
+    if (message instanceof AnswerClick) {
+        model.hasAnswered = true
+        model.currentCorrectAnswer = message.correctAnswer
+        model.currentAnswer = message.answer
+    }
+    if (message instanceof NextClick) {
+        model.hasAnswered = false
+        model.round += 1
+    }
+    return model
+}
 
-const renderQuiz = (placeholder, state) => {
+const signal = (action) => {
+    return function callback() {
+        state = update(state, action)
+        view(signal, state, out)
+    }
+}
+
+const view = (signal, model, placeholder) =>
     renderTo(placeholder)(
-        app(state, onAnswerClick, onNext)
+        app(model, signal)
     )
-}
-
-const onAnswerClick = (correctAnswer) => (answer) => {
-    state.hasAnswered = true
-    state.currentCorrectAnswer = correctAnswer
-    state.currentAnswer = answer
-
-    renderQuiz(out, state)
-}
-
-const onNext = () => {
-    state.hasAnswered = false
-    state.round += 1
-
-    renderQuiz(out, state)
-}
-
-const onActionHappened = (actionHandler) => {
-    actionHandler()
-    
-    renderQuiz(out, state)
-}
 
 
-
-
-
-
-
-
-
-
-const onLoad = () => {
+let out = {}
+const run = () => {
     out = ref('out')
 
-    renderQuiz(out, state)
+    view(signal, state, out)
 }
 
-window.onload = onLoad
+window.onload = run
