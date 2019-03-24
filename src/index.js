@@ -1,20 +1,34 @@
 import './css/style.css'
-import data from './sentences'
 import { generateQuiz } from './quiz'
-import { ref, renderTo } from './lib/dom'
+import { getElementById, renderTo } from './lib/dom'
 import app from './components/app'
 import AnswerClick from './actions/answerClick'
 import NextClick from './actions/nextClick'
+import Started from './actions/started'
+import DataLoaded from './actions/dataLoaded'
 
 let state = {
-    quiz: generateQuiz(data, 2, 4),
+    quiz: [],
     round: 0,
     hasAnswered: false,
     currentCorrectAnswer: ``,
-    currentAnswer: ``
+    currentAnswer: ``,
+    placeholder: {}
 }
 
-const update = (model, message) => {
+const update = (signal, model, message) => {
+    if (message instanceof Started) {
+        model.placeholder = getElementById('out')
+
+        fetch('/src/sentences.json')
+            .then(response => response.json())
+            .then(function(result) {
+                signal(new DataLoaded(result))()
+            })
+    }
+    if (message instanceof DataLoaded){
+        model.quiz = generateQuiz(message.data, 2, 4)
+    }
     if (message instanceof AnswerClick) {
         model.hasAnswered = true
         model.currentCorrectAnswer = message.correctAnswer
@@ -24,27 +38,19 @@ const update = (model, message) => {
         model.hasAnswered = false
         model.round += 1
     }
-    return model 
+    return model
 }
 
 const signal = (action) => {
     return function callback() {
-        state = update(state, action)
-        view(signal, state, out)
+        state = update(signal, state, action)
+        view(signal, state)
     }
 }
 
-const view = (signal, model, placeholder) =>
-    renderTo(placeholder)(
-        app(model, signal)
+const view = (signal, model) =>
+    renderTo(model.placeholder)(
+        app(signal, model)
     )
 
-
-let out = {}
-const run = () => {
-    out = ref('out')
-
-    view(signal, state, out)
-}
-
-window.onload = run
+window.onload = signal(new Started())

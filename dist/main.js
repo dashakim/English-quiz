@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body{\\r\\n    background-color:rgb(46, 45, 45);\\r\\n}\\r\\nh1{\\r\\n    color:rgb(211, 187, 55);\\r\\n}\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n    background-color: #3f3f41;\\n    margin: 15px\\n}\\n\\n.app {\\n    color: rgb(245, 245, 245);\\n    text-align: center\\n}\\n\\n.main {\\n    display: grid;\\n    grid-template-columns: 2fr;\\n}\\n\\n\\n\\n.answers {\\n    display: grid;\\n    grid-template-columns: repeat(4, 1fr);\\n    grid-gap: 20px;\\n}\\n\\n.answer-button,\\n.next-button {\\n    margin: 0;\\n    font-size: 16pt;\\n    line-height: 1.499;\\n    font-weight: 600;\\n    white-space: nowrap;\\n    text-align: center;\\n    background-color: #3f3f41;\\n    border: 1px solid #ebebeb;\\n    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    cursor: pointer;\\n    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    -webkit-user-select: none;\\n    -moz-user-select: none;\\n    -ms-user-select: none;\\n    user-select: none;\\n    -ms-touch-action: manipulation;\\n    touch-action: manipulation;\\n    padding: 10px 50px;\\n    font-size: 18px;\\n    border-radius: 5px;\\n    color: rgba(255, 255, 255, 0.924);\\n}\\n\\n.answer-button:hover,\\n.next-button:hover {\\n    background-color: rgba(255, 255, 255, 0.924);\\n    color: #3f3f41;\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -131,6 +131,138 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
+/***/ "./src/actions/answerClick.js":
+/*!************************************!*\
+  !*** ./src/actions/answerClick.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar AnswerClick = function AnswerClick(correctAnswer, answer) {\n  _classCallCheck(this, AnswerClick);\n\n  this.correctAnswer = correctAnswer;\n  this.answer = answer;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AnswerClick);\n\n//# sourceURL=webpack:///./src/actions/answerClick.js?");
+
+/***/ }),
+
+/***/ "./src/actions/dataLoaded.js":
+/*!***********************************!*\
+  !*** ./src/actions/dataLoaded.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar DataLoaded = function DataLoaded() {\n  _classCallCheck(this, DataLoaded);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DataLoaded);\n\n//# sourceURL=webpack:///./src/actions/dataLoaded.js?");
+
+/***/ }),
+
+/***/ "./src/actions/nextClick.js":
+/*!**********************************!*\
+  !*** ./src/actions/nextClick.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar NextClick = function NextClick() {\n  _classCallCheck(this, NextClick);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (NextClick);\n\n//# sourceURL=webpack:///./src/actions/nextClick.js?");
+
+/***/ }),
+
+/***/ "./src/actions/started.js":
+/*!********************************!*\
+  !*** ./src/actions/started.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Started = function Started() {\n  _classCallCheck(this, Started);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Started);\n\n//# sourceURL=webpack:///./src/actions/started.js?");
+
+/***/ }),
+
+/***/ "./src/components/app.js":
+/*!*******************************!*\
+  !*** ./src/components/app.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _complete__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./complete */ \"./src/components/complete.js\");\n/* harmony import */ var _round__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./round */ \"./src/components/round.js\");\n\n\n\n\nvar app = function app(signal, state) {\n  var result;\n  if (state.round > state.quiz.length - 1) result = Object(_complete__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();else {\n    var roundData = state.quiz[state.round];\n    result = Object(_round__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(signal, state.quiz.length, state.round, roundData.question, roundData.answers, state.hasAnswered, state.currentAnswer, state.currentCorrectAnswer, roundData.correсtAnswer);\n  }\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, result);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/components/app.js?");
+
+/***/ }),
+
+/***/ "./src/components/choice.js":
+/*!**********************************!*\
+  !*** ./src/components/choice.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/dom */ \"./src/lib/dom.js\");\n\n\nvar choice = function choice(txt, onclick) {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"answer\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"button\"])({\n    className: \"answer-button\",\n    onclick: onclick\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"\".concat(txt))), Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (choice);\n\n//# sourceURL=webpack:///./src/components/choice.js?");
+
+/***/ }),
+
+/***/ "./src/components/choices.js":
+/*!***********************************!*\
+  !*** ./src/components/choices.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _choice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./choice */ \"./src/components/choice.js\");\n/* harmony import */ var _actions_answerClick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/answerClick */ \"./src/actions/answerClick.js\");\n\n\n\nvar choices = function choices(signal, answers, correctAnswer) {\n  return answers.map(function (a) {\n    return Object(_choice__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(a, signal(new _actions_answerClick__WEBPACK_IMPORTED_MODULE_1__[\"default\"](correctAnswer, a)));\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (choices);\n\n//# sourceURL=webpack:///./src/components/choices.js?");
+
+/***/ }),
+
+/***/ "./src/components/complete.js":
+/*!************************************!*\
+  !*** ./src/components/complete.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/dom */ \"./src/lib/dom.js\");\n\n\nvar complete = function complete() {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"h1\"])({}, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"Aaaa, vi iz anglii!\"), Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\" :)\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (complete);\n\n//# sourceURL=webpack:///./src/components/complete.js?");
+
+/***/ }),
+
+/***/ "./src/components/question.js":
+/*!************************************!*\
+  !*** ./src/components/question.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/dom */ \"./src/lib/dom.js\");\n\n\nvar question = function question(txt) {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"h1\"])({}, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"\".concat(txt)), Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"br\"])());\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (question);\n\n//# sourceURL=webpack:///./src/components/question.js?");
+
+/***/ }),
+
+/***/ "./src/components/round.js":
+/*!*********************************!*\
+  !*** ./src/components/round.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _question__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./question */ \"./src/components/question.js\");\n/* harmony import */ var _choices__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./choices */ \"./src/components/choices.js\");\n/* harmony import */ var _roundResult__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./roundResult */ \"./src/components/roundResult.js\");\n/* harmony import */ var _actions_nextClick__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions/nextClick */ \"./src/actions/nextClick.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n\n\n\n\n\n\nvar round = function round(signal, totalQuestions, currentQuestion, qstion, answrs, hasAnswered, currentAnswer, currentCorrectAnswer, correctAnswer) {\n  var progress = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"h1\"])({}, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"Question \".concat(currentQuestion + 1, \"/\").concat(totalQuestions)), Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"br\"])());\n  var questionTitle = Object(_question__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(qstion);\n  var answers = _lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"].apply(void 0, [{\n    className: \"answers\"\n  }].concat(_toConsumableArray(Object(_choices__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(signal, answrs, correctAnswer))));\n  var resultText = currentAnswer === currentCorrectAnswer ? \"Ty top!\" : \"You've answered: \".concat(currentAnswer, \", but correct was: \").concat(currentCorrectAnswer);\n  var result = Object(_roundResult__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(resultText, signal(new _actions_nextClick__WEBPACK_IMPORTED_MODULE_4__[\"default\"]()));\n  var round = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"round\"\n  }, progress, questionTitle, answers, hasAnswered ? result : Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"\"));\n  return round;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (round);\n\n//# sourceURL=webpack:///./src/components/round.js?");
+
+/***/ }),
+
+/***/ "./src/components/roundResult.js":
+/*!***************************************!*\
+  !*** ./src/components/roundResult.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/dom */ \"./src/lib/dom.js\");\n\n\nvar roundResult = function roundResult(result, onNext) {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"round-result\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"h1\"])({}, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(result)), Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"button\"])({\n    onclick: onNext,\n    className: \"next-button\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"Next question\")));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (roundResult);\n\n//# sourceURL=webpack:///./src/components/roundResult.js?");
+
+/***/ }),
+
 /***/ "./src/css/style.css":
 /*!***************************!*\
   !*** ./src/css/style.css ***!
@@ -150,7 +282,7 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sentences__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sentences */ \"./src/sentences.json\");\nvar _sentences__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./sentences */ \"./src/sentences.json\", 1);\n/* harmony import */ var _quiz__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./quiz */ \"./src/quiz.js\");\n\n\n\nvar quiz = Object(_quiz__WEBPACK_IMPORTED_MODULE_2__[\"generateQuiz\"])(_sentences__WEBPACK_IMPORTED_MODULE_1__, 5, 4);\n\nvar renderQuiz = function renderQuiz(placeholder, index) {\n  if (index > quiz.length - 1) placeholder.innerHTML = renderFin();\n  var question = quiz[index];\n  var body = \"<h1>Question: \".concat(question.question, \"?<br></h1>\");\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = question.answerOptions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var answer = _step.value;\n      body += renderAnswer(answer, question.corretAnswer);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator.return != null) {\n        _iterator.return();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  placeholder.innerHTML = body;\n};\n\nvar out = document.getElementById('out');\nvar index = 0;\n\nvar renderAnswer = function renderAnswer(answer, corretAnswer) {\n  return \"<button onclick='alert(\\\"\".concat(corretAnswer, \"\\\"); renderQuiz(out, ++index)'>\").concat(answer, \"</button> &nbsp;\");\n};\n\nvar renderFin = function renderFin() {\n  return \"<h1>Aaaa, vi iz anglii!</h1>\";\n};\n\nrenderQuiz(out, index);\nwindow.renderQuiz = renderQuiz;\nwindow.out = out;\nwindow.quiz = quiz;\nwindow.index = index; // const renderQuestion = (question)\n// const out = document.getElementById('out')\n// for (const key in quiz[0]) {\n//     out.innerHTML += key + ' ' + quiz[0][key] + '<br>'\n// }\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sentences__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sentences */ \"./src/sentences.json\");\nvar _sentences__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./sentences */ \"./src/sentences.json\", 1);\n/* harmony import */ var _quiz__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./quiz */ \"./src/quiz.js\");\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _components_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/app */ \"./src/components/app.js\");\n/* harmony import */ var _actions_answerClick__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/answerClick */ \"./src/actions/answerClick.js\");\n/* harmony import */ var _actions_nextClick__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/nextClick */ \"./src/actions/nextClick.js\");\n/* harmony import */ var _actions_started__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./actions/started */ \"./src/actions/started.js\");\n/* harmony import */ var _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./actions/dataLoaded */ \"./src/actions/dataLoaded.js\");\n\n\n\n\n\n\n\n\n\nvar state = {\n  quiz: Object(_quiz__WEBPACK_IMPORTED_MODULE_2__[\"generateQuiz\"])(_sentences__WEBPACK_IMPORTED_MODULE_1__, 2, 4),\n  round: 0,\n  hasAnswered: false,\n  currentCorrectAnswer: \"\",\n  currentAnswer: \"\",\n  placeholder: {}\n};\n\nvar update = function update(model, message) {\n  if (message instanceof _actions_started__WEBPACK_IMPORTED_MODULE_7__[\"default\"]) {\n    model.placeholder = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_3__[\"getElementById\"])('out');\n  }\n\n  if (message instanceof _actions_answerClick__WEBPACK_IMPORTED_MODULE_5__[\"default\"]) {\n    model.hasAnswered = true;\n    model.currentCorrectAnswer = message.correctAnswer;\n    model.currentAnswer = message.answer;\n  }\n\n  if (message instanceof _actions_nextClick__WEBPACK_IMPORTED_MODULE_6__[\"default\"]) {\n    model.hasAnswered = false;\n    model.round += 1;\n  }\n\n  return model;\n};\n\nvar signal = function signal(action) {\n  return function callback() {\n    state = update(state, action);\n    view(signal, state);\n  };\n};\n\nvar view = function view(signal, model) {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_3__[\"renderTo\"])(model.placeholder)(Object(_components_app__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(signal, model));\n};\n\nwindow.onload = signal(new _actions_started__WEBPACK_IMPORTED_MODULE_7__[\"default\"]());\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -158,11 +290,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
 /*!***************************!*\
   !*** ./src/lib/arrays.js ***!
   \***************************/
-/*! exports provided: range, deleteAt, insertAt */
+/*! exports provided: range, deleteAt, insertAt, swap, append, shuffle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"range\", function() { return range; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deleteAt\", function() { return deleteAt; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"insertAt\", function() { return insertAt; });\nvar range = function range(from, to) {\n  var start = from;\n  var result = [];\n\n  while (start <= to) {\n    result.push(start++);\n  }\n\n  return result;\n};\nvar deleteAt = function deleteAt(array, position) {\n  var copy = array.slice();\n  var deleted = copy.splice(position, 1);\n  return copy;\n};\nvar insertAt = function insertAt(array, item, position) {\n  var result = array.slice();\n  result.splice(position, 0, item);\n  return result;\n};\n\n//# sourceURL=webpack:///./src/lib/arrays.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"range\", function() { return range; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deleteAt\", function() { return deleteAt; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"insertAt\", function() { return insertAt; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"swap\", function() { return swap; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"append\", function() { return append; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"shuffle\", function() { return shuffle; });\n/* harmony import */ var _random__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./random */ \"./src/lib/random.js\");\n\nvar range = function range(from, to) {\n  var start = from;\n  var result = [];\n\n  while (start <= to) {\n    result.push(start++);\n  }\n\n  return result;\n};\nvar deleteAt = function deleteAt(array, position) {\n  var copy = array.slice();\n  var deleted = copy.splice(position, 1);\n  return copy;\n};\nvar insertAt = function insertAt(array, item, position) {\n  var result = array.slice();\n  result.splice(position, 0, item);\n  return result;\n};\nvar swap = function swap(array, index1, index2) {\n  var swapped = array[index1];\n  array[index1] = array[index2];\n  array[index2] = swapped;\n};\nvar append = function append(array, el) {\n  var result = array.slice();\n  result.push(el);\n  return result;\n};\nvar shuffle = function shuffle(array) {\n  for (var index = array.length - 1; index >= 0; index--) {\n    swap(array, index, Object(_random__WEBPACK_IMPORTED_MODULE_0__[\"integer\"])(index));\n  }\n\n  return array;\n};\n\n//# sourceURL=webpack:///./src/lib/arrays.js?");
+
+/***/ }),
+
+/***/ "./src/lib/dom.js":
+/*!************************!*\
+  !*** ./src/lib/dom.js ***!
+  \************************/
+/*! exports provided: setInner, getElementById, renderTo, button, div, h1, br, text */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setInner\", function() { return setInner; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getElementById\", function() { return getElementById; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"renderTo\", function() { return renderTo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"button\", function() { return button; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"div\", function() { return div; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"h1\", function() { return h1; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"br\", function() { return br; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"text\", function() { return text; });\nvar setInner = function setInner(node) {\n  clear(node);\n\n  for (var _len = arguments.length, inner = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    inner[_key - 1] = arguments[_key];\n  }\n\n  return appendInner(node, inner);\n};\nvar getElementById = function getElementById(id) {\n  return document.getElementById(id);\n};\nvar renderTo = function renderTo(where) {\n  return function () {\n    for (var _len2 = arguments.length, inner = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {\n      inner[_key2] = arguments[_key2];\n    }\n\n    return setInner.apply(void 0, [where].concat(inner));\n  };\n};\nvar button = function button(properties) {\n  var el = document.createElement(\"button\");\n  Object.assign(el, properties);\n\n  for (var _len3 = arguments.length, inner = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {\n    inner[_key3 - 1] = arguments[_key3];\n  }\n\n  return appendInner(el, inner);\n};\nvar div = function div(properties) {\n  var el = document.createElement(\"div\");\n  Object.assign(el, properties);\n\n  for (var _len4 = arguments.length, inner = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {\n    inner[_key4 - 1] = arguments[_key4];\n  }\n\n  return appendInner(el, inner);\n};\nvar h1 = function h1(properties) {\n  var el = document.createElement(\"h1\");\n  Object.assign(el, properties);\n\n  for (var _len5 = arguments.length, inner = new Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {\n    inner[_key5 - 1] = arguments[_key5];\n  }\n\n  return appendInner(el, inner);\n};\nvar br = function br() {\n  return document.createElement(\"br\");\n};\nvar text = function text(txt) {\n  return document.createTextNode(txt);\n};\n\nvar appendInner = function appendInner(node, inner) {\n  inner.forEach(function (el) {\n    return node.appendChild(el);\n  });\n  return node;\n};\n\nvar clear = function clear(node) {\n  var range = document.createRange();\n  range.selectNodeContents(node);\n  range.deleteContents();\n  return node;\n};\n\n//# sourceURL=webpack:///./src/lib/dom.js?");
 
 /***/ }),
 
@@ -186,7 +330,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generateQuiz\", function() { return generateQuiz; });\n/* harmony import */ var _lib_arrays__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/arrays */ \"./src/lib/arrays.js\");\n/* harmony import */ var _lib_random__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/random */ \"./src/lib/random.js\");\n\n\nvar generateQuiz = function generateQuiz(data, quizQuestionsNumber, quizOptionsNumber) {\n  var onlyQuestions = Object.values(data);\n  var onlyAnswers = Object.keys(data);\n  var positions = _lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"range\"](0, onlyQuestions.length - 1);\n  var chosenPositions = _lib_random__WEBPACK_IMPORTED_MODULE_1__[\"choose\"](positions, quizQuestionsNumber);\n  var quiz = chosenPositions.map(function (pos) {\n    return {\n      index: pos,\n      question: onlyQuestions[pos],\n      corretAnswer: onlyAnswers[pos],\n      answerOptions: _lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"insertAt\"](_lib_random__WEBPACK_IMPORTED_MODULE_1__[\"choose\"](_lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"deleteAt\"](onlyAnswers, pos), quizOptionsNumber - 1), onlyAnswers[pos], _lib_random__WEBPACK_IMPORTED_MODULE_1__[\"integer\"](quizOptionsNumber - 1))\n    };\n  });\n  return quiz;\n};\n\n//# sourceURL=webpack:///./src/quiz.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generateQuiz\", function() { return generateQuiz; });\n/* harmony import */ var _lib_arrays__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/arrays */ \"./src/lib/arrays.js\");\n/* harmony import */ var _lib_random__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/random */ \"./src/lib/random.js\");\n\n\nvar generateQuiz = function generateQuiz(data, questionsNumber, answersNumber) {\n  var allQuestions = Object.values(data);\n  var allAnswers = Object.keys(data);\n  var positions = _lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"range\"](0, allQuestions.length - 1);\n  var chosenQuestions = _lib_random__WEBPACK_IMPORTED_MODULE_1__[\"choose\"](positions, questionsNumber);\n  var result = [];\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = chosenQuestions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var pos = _step.value;\n      var wrongAnswers = _lib_random__WEBPACK_IMPORTED_MODULE_1__[\"choose\"](_lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"deleteAt\"](allAnswers, pos), answersNumber - 1);\n      var answers = _lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"append\"](wrongAnswers, allAnswers[pos]);\n      _lib_arrays__WEBPACK_IMPORTED_MODULE_0__[\"shuffle\"](answers);\n      var item = {\n        index: pos,\n        question: allQuestions[pos],\n        correсtAnswer: allAnswers[pos],\n        answers: answers\n      };\n      result.push(item);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator.return != null) {\n        _iterator.return();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return result;\n};\n\n//# sourceURL=webpack:///./src/quiz.js?");
 
 /***/ }),
 

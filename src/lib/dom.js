@@ -3,7 +3,7 @@ export const setInner = (node, ...inner) => {
     return appendInner(node, inner)
 }
 
-export const ref = (id) => {
+export const getElementById = (id) => {
     return document.getElementById(id)
 }
 

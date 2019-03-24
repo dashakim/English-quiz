@@ -2,7 +2,7 @@ import { div } from '../lib/dom'
 import complete from './complete'
 import round from './round'
 
-const app = (state, signal) => {
+const app = (signal, state) => {
     let result
 
     if (state.round > state.quiz.length - 1)
@@ -10,6 +10,8 @@ const app = (state, signal) => {
     else {
         const roundData = state.quiz[state.round]
         result = round(signal,
+            state.quiz.length,
+            state.round,
             roundData.question,
             roundData.answers,
             state.hasAnswered,

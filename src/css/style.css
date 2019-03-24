@@ -1,6 +1,5 @@
 body {
     background-color: #3f3f41;
-    padding: 50px;
     margin: 15px
 }
 
@@ -13,6 +12,8 @@ body {
     display: grid;
     grid-template-columns: 2fr;
 }
+
+
 
 .answers {
     display: grid;
