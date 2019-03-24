@@ -8,6 +8,7 @@ import Started from './actions/started'
 import DataLoaded from './actions/dataLoaded'
 
 let state = {
+    loading: true,
     quiz: [],
     round: 0,
     hasAnswered: false,
@@ -16,18 +17,25 @@ let state = {
     placeholder: {}
 }
 
+const sleep = (ms) => {
+    ms += new Date().getTime();
+    while (new Date() < ms) { }
+}
+
 const update = (signal, model, message) => {
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
 
         fetch('/src/sentences.json')
             .then(response => response.json())
-            .then(function(result) {
+            .then(function (result) {
+                sleep(5000)
                 signal(new DataLoaded(result))()
             })
     }
-    if (message instanceof DataLoaded){
+    if (message instanceof DataLoaded) {
         model.quiz = generateQuiz(message.data, 2, 4)
+        model.loading = false
     }
     if (message instanceof AnswerClick) {
         model.hasAnswered = true
