@@ -24,7 +24,7 @@ const update = (model, message) => {
         model.hasAnswered = false
         model.round += 1
     }
-    return model
+    return model 
 }
 
 const signal = (action) => {

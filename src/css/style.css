@@ -1,45 +1,35 @@
 body {
-    /* background-color: rgb(36, 35, 35); */
-    background-color: #222;
-}
-
-h1 {
-    color: rgb(211, 187, 55);
+    background-color: #3f3f41;
+    padding: 50px;
+    margin: 15px
 }
 
 .app {
+    color: rgb(245, 245, 245);
+    text-align: center
+}
+
+.main {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 2fr;
 }
 
 .answers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.answer {
-    margin-right: 20px;
-}
-
-.round-result {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
 }
 
 .answer-button,
 .next-button {
+    margin: 0;
     font-size: 16pt;
     line-height: 1.499;
-    position: relative;
-    display: inline-block;
     font-weight: 600;
     white-space: nowrap;
     text-align: center;
-    background-image: none;
-    border: 1px solid transparent;
+    background-color: #3f3f41;
+    border: 1px solid #ebebeb;
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
     cursor: pointer;
@@ -51,10 +41,14 @@ h1 {
     user-select: none;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
-    height: 32px;
-    padding: 0 15px;
-    font-size: 14px;
-    border-radius: 4px;
-    color: rgba(0, 0, 0, 0.924);
-    background-color: rgb(231, 181, 15);
+    padding: 10px 50px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.924);
+}
+
+.answer-button:hover,
+.next-button:hover {
+    background-color: rgba(255, 255, 255, 0.924);
+    color: #3f3f41;
 }
