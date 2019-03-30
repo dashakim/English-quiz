@@ -22,19 +22,17 @@ const sleep = (ms) => {
     while (new Date() < ms) { }
 }
 
-const update = (signal, model, message) => {
+const update = (signal, model, message) => {    
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
-
-        fetch('/src/sentences.json')
+        fetch('sentences.json')
             .then(response => response.json())
             .then(function (result) {
-                sleep(5000)
                 signal(new DataLoaded(result))()
             })
     }
     if (message instanceof DataLoaded) {
-        model.quiz = generateQuiz(message.data, 2, 4)
+        model.quiz = generateQuiz(message.data, 100, 4)
         model.loading = false
     }
     if (message instanceof AnswerClick) {
@@ -46,6 +44,10 @@ const update = (signal, model, message) => {
         model.hasAnswered = false
         model.round += 1
     }
+
+    console.log(`Handled: `, message);
+    console.log(model);
+    
     return model
 }
 
