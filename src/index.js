@@ -25,7 +25,7 @@ const sleep = (ms) => {
 const update = (signal, model, message) => {    
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
-        fetch('sentences.json')
+        fetch('/sentences.json')
             .then(response => response.json())
             .then(function (result) {
                 signal(new DataLoaded(result))()
