@@ -4,26 +4,23 @@ body {
 }
 
 .app {
+    display: grid;
+  
     color: rgb(245, 245, 245);
     text-align: center
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 2fr;
-}
-
-
-
 .answers {
+    
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
     grid-gap: 20px;
 }
 
 .answer-button,
 .next-button {
-    margin: 0;
+    width: 100%;
     font-size: 16pt;
     line-height: 1.499;
     font-weight: 600;
@@ -44,6 +41,7 @@ body {
     touch-action: manipulation;
     padding: 10px 50px;
     font-size: 18px;
+
     border-radius: 5px;
     color: rgba(255, 255, 255, 0.924);
 }
