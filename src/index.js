@@ -40,12 +40,12 @@ const update = (signal, model, message) => {
         model.currentCorrectAnswer = message.correctAnswer
         model.currentAnswer = message.answer
 
-        if (model.currentCorrectAnswer === model.currentAnswer) {
-            setTimeout(signal(new NextClick()), 2000)
-        }
-        else {
-            setTimeout(signal(new NextClick()), 3000)
-        }
+        // if (model.currentCorrectAnswer === model.currentAnswer) {
+        //     setTimeout(signal(new NextClick()), 2000)
+        // }
+        // else {
+        //     setTimeout(signal(new NextClick()), 3000)
+        // }
     }
     if (message instanceof NextClick) {
         model.hasAnswered = false
