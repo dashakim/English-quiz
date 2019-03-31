@@ -22,7 +22,7 @@ const sleep = (ms) => {
     while (new Date() < ms) { }
 }
 
-const update = (signal, model, message) => {    
+const update = (signal, model, message) => {
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
         fetch('/sentences.json')
@@ -39,6 +39,13 @@ const update = (signal, model, message) => {
         model.hasAnswered = true
         model.currentCorrectAnswer = message.correctAnswer
         model.currentAnswer = message.answer
+
+        if (model.currentCorrectAnswer === model.currentAnswer) {
+            setTimeout(signal(new NextClick()), 2000)
+        }
+        else {
+            setTimeout(signal(new NextClick()), 3000)
+        }
     }
     if (message instanceof NextClick) {
         model.hasAnswered = false
@@ -47,7 +54,7 @@ const update = (signal, model, message) => {
 
     console.log(`Handled: `, message);
     console.log(model);
-    
+
     return model
 }
 

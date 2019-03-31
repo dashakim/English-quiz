@@ -3,6 +3,10 @@ body {
     margin: 15px
 }
 
+h1 {
+    font-size: 20pt;
+}
+
 .app {
     display: grid;
   

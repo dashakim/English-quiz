@@ -23,8 +23,8 @@ const round = (signal,
     const answers = div({ className: `answers` }, ...choices(signal, answrs, correctAnswer))
 
     const resultText = currentAnswer === currentCorrectAnswer
-        ? `Ty top!`
-        : `You've answered: ${currentAnswer}, but correct was: ${currentCorrectAnswer}`
+        ? `Correct!`
+        : `Correct was: ${currentCorrectAnswer}`
 
     const result = roundResult(resultText,
         signal(new NextClick()))
