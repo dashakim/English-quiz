@@ -1,15 +1,21 @@
 body {
     background-color: #3f3f41;
-    margin: 15px
+    /* margin: 15px */
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr
+ 
 }
 
 h1 {
-    font-size: 20pt;
+    font-size: 18pt;
 }
 
 .app {
     display: grid;
-  
+  grid-column-start: 2;
     color: rgb(245, 245, 245);
     text-align: center
 }
@@ -21,10 +27,10 @@ h1 {
     grid-template-rows: 1fr;
     grid-gap: 20px;
 }
-
+.answer-button{width: 100%}
 .answer-button,
 .next-button {
-    width: 100%;
+   
     font-size: 16pt;
     line-height: 1.499;
     font-weight: 600;
@@ -55,3 +61,4 @@ h1 {
     background-color: rgba(255, 255, 255, 0.924);
     color: #3f3f41;
 }
+
