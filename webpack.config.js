@@ -1,13 +1,18 @@
 let path = require('path');
 let conf = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        auth: './src/auth.js'
+    },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'main.js',
+        filename: '[name].js',
         publicPath: 'dist/'
     },
     devServer: {
-        overlay: true
+        overlay: true,
+        publicPath: 'dist/',
+        contentBase: path.join(__dirname, 'dist')
     },
     module: {
         rules: [

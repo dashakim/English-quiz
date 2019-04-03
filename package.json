@@ -28,5 +28,8 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@firebase/app": "^0.3.13",
+    "@firebase/auth": "^0.9.6"
+  }
 }
