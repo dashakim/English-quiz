@@ -11,6 +11,13 @@ export const renderTo = (where) => {
     return (...inner) => setInner(where, ...inner)
 }
 
+export const img = (properties,) => {
+    const el = document.createElement(`img`)
+    Object.assign(el, properties)
+
+    return el
+}
+
 export const button = (properties, ...inner) => {
     const el = document.createElement(`button`)
     Object.assign(el, properties)

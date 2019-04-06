@@ -39,7 +39,10 @@ const update = (signal, model, message) => {
         window.location.href = '/auth.html'
     }
     if (message instanceof LoggedIn) {
-        model.displayName = message.user.displayName
+        model.user = {}
+        model.user.displayName = message.user.displayName
+        model.user.photoURL = message.user.photoURL
+        model.user.email = message.user.email
     }
     if (message instanceof DataLoaded) {
         model.quiz = generateQuiz(message.data, 100, 4)

@@ -1,4 +1,4 @@
-import { text, div } from '../lib/dom'
+import { text, div, img } from '../lib/dom'
 import complete from './complete'
 import round from './round'
 
@@ -22,7 +22,15 @@ const app = (signal, state) => {
             roundData.correсtAnswer)
     }
 
-    let loginDetails = div({}, text(state.displayName))
+    let loginDetails = state.user
+        ? div({ className: `login` },
+            img({
+                className: `login-image`,
+                src: state.user.photoURL,
+                alt: `${state.user.displayName} (${state.user.email})`,
+                title: `${state.user.displayName} (${state.user.email})`
+            }))
+        : text()
 
     return div({ className: `app` }, loginDetails, result)
 }

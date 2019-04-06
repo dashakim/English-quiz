@@ -62,3 +62,13 @@ h1 {
     color: #3f3f41;
 }
 
+.login {
+    display: grid;
+    justify-content: right;
+}
+
+.login-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;    
+}
