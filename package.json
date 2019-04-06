@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "@firebase/app": "^0.3.13",
-    "@firebase/auth": "^0.9.6"
+    "@firebase/auth": "^0.9.6",
+    "@firebase/database": "^0.3.17",
+    "@firebase/storage": "^0.2.12"
   }
 }

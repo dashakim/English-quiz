@@ -22,7 +22,9 @@ const app = (signal, state) => {
             roundData.correсtAnswer)
     }
 
-    return div({ className: `app` }, result)
+    let loginDetails = div({}, text(state.displayName))
+
+    return div({ className: `app` }, loginDetails, result)
 }
 
 export default app

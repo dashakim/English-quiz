@@ -6,6 +6,15 @@ import AnswerClick from './actions/answerClick'
 import NextClick from './actions/nextClick'
 import Started from './actions/started'
 import DataLoaded from './actions/dataLoaded'
+import LoggedIn from './actions/loggedIn'
+import AnonymousLoggedIn from './actions/anonymousLoggedIn'
+
+import { firebase } from "@firebase/app"
+import "@firebase/auth"
+import config from './firebase-config.json';
+
+firebase.initializeApp(config)
+firebase.auth().languageCode = 'en'
 
 let state = {
     loading: true,
@@ -17,11 +26,6 @@ let state = {
     placeholder: {}
 }
 
-const sleep = (ms) => {
-    ms += new Date().getTime();
-    while (new Date() < ms) { }
-}
-
 const update = (signal, model, message) => {
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
@@ -31,6 +35,12 @@ const update = (signal, model, message) => {
                 signal(new DataLoaded(result))()
             })
     }
+    if (message instanceof AnonymousLoggedIn) {
+        window.location.href = '/auth.html'
+    }
+    if (message instanceof LoggedIn) {
+        model.displayName = message.user.displayName
+    }
     if (message instanceof DataLoaded) {
         model.quiz = generateQuiz(message.data, 100, 4)
         model.loading = false
@@ -39,13 +49,6 @@ const update = (signal, model, message) => {
         model.hasAnswered = true
         model.currentCorrectAnswer = message.correctAnswer
         model.currentAnswer = message.answer
-
-        // if (model.currentCorrectAnswer === model.currentAnswer) {
-        //     setTimeout(signal(new NextClick()), 2000)
-        // }
-        // else {
-        //     setTimeout(signal(new NextClick()), 3000)
-        // }
     }
     if (message instanceof NextClick) {
         model.hasAnswered = false
@@ -71,3 +74,12 @@ const view = (signal, model) =>
     )
 
 window.onload = signal(new Started())
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (!user) {
+        signal(new AnonymousLoggedIn())()
+    }
+    else {
+        signal(new LoggedIn(user))()
+    }
+})

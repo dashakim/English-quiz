@@ -1,0 +1,8 @@
+{
+    "apiKey": "AIzaSyDknHvufVwmnM38bzm6F9ONmv7Zmd_2KUk",
+    "authDomain": "studyator.com",
+    "databaseURL": "https://stadyator.firebaseio.com",
+    "projectId": "stadyator",
+    "storageBucket": "stadyator.appspot.com",
+    "messagingSenderId": "337740404088"
+  }
