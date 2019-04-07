@@ -19,6 +19,7 @@ const app = (signal, state) => {
             state.hasAnswered,
             state.currentAnswer,
             state.currentCorrectAnswer,
+            state.counter,
             roundData.correсtAnswer)
     }
 

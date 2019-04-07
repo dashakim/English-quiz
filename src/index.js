@@ -23,6 +23,7 @@ let state = {
     hasAnswered: false,
     currentCorrectAnswer: ``,
     currentAnswer: ``,
+    counter: 0,
     placeholder: {}
 }
 
@@ -52,6 +53,9 @@ const update = (signal, model, message) => {
         model.hasAnswered = true
         model.currentCorrectAnswer = message.correctAnswer
         model.currentAnswer = message.answer
+        if (model.currentAnswer === model.currentCorrectAnswer) {
+            model.counter++
+        }
     }
     if (message instanceof NextClick) {
         model.hasAnswered = false

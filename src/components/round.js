@@ -4,7 +4,6 @@ import choices from './choices'
 import roundResult from './roundResult'
 import NextClick from '../actions/nextClick'
 
-
 const round = (signal,
     totalQuestions,
     currentQuestion,
@@ -13,10 +12,11 @@ const round = (signal,
     hasAnswered,
     currentAnswer,
     currentCorrectAnswer,
+    counter,
     correctAnswer) => {
 
     const progress = h1({},
-        text(`Question ${currentQuestion + 1}/${totalQuestions}`),
+        text(`Question ${currentQuestion + 1}/${totalQuestions} Score ${counter}`),
         br())
 
     const questionTitle = question(qstion)
