@@ -11,10 +11,13 @@ import AnonymousLoggedIn from './actions/anonymousLoggedIn'
 
 import { firebase } from "@firebase/app"
 import "@firebase/auth"
+import "@firebase/firestore"
 import config from './firebase-config.json';
 
 firebase.initializeApp(config)
 firebase.auth().languageCode = 'en'
+
+const db = firebase.firestore()
 
 let state = {
     loading: true,
@@ -24,6 +27,7 @@ let state = {
     currentCorrectAnswer: ``,
     currentAnswer: ``,
     counter: 0,
+    user: {},
     placeholder: {}
 }
 
@@ -40,7 +44,7 @@ const update = (signal, model, message) => {
         window.location.href = '/auth.html'
     }
     if (message instanceof LoggedIn) {
-        model.user = {}
+        model.user.uid = message.user.uid
         model.user.displayName = message.user.displayName
         model.user.photoURL = message.user.photoURL
         model.user.email = message.user.email
@@ -56,6 +60,15 @@ const update = (signal, model, message) => {
         if (model.currentAnswer === model.currentCorrectAnswer) {
             model.counter++
         }
+
+        const roundData = model.quiz[model.round]
+        db.collection(`users`).doc(model.user.uid)
+          .collection(`questions`).doc(roundData.question)
+            .set({
+                answer: model.currentAnswer,
+                correctAnswer: model.currentCorrectAnswer
+            })
+            .then(() => console.log("Answer saved"))
     }
     if (message instanceof NextClick) {
         model.hasAnswered = false
