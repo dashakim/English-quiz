@@ -62,12 +62,22 @@ const update = (signal, model, message) => {
         }
 
         const roundData = model.quiz[model.round]
-        db.collection(`users`).doc(model.user.uid)
-          .collection(`questions`).doc(roundData.question)
-            .set({
-                answer: model.currentAnswer,
-                correctAnswer: model.currentCorrectAnswer
-            })
+        const userRef = db
+            .collection(`users`).doc(model.user.uid)
+
+        const questionRef = userRef
+            .collection(`questions`).doc(roundData.question)
+
+        userRef.set({ name: model.user.displayName, email: model.user.email })
+            .then(() => console.log("User saved"))
+
+        questionRef
+            .set({ correctAnswer: model.currentCorrectAnswer })
+            .then(() => console.log("Question saved"))
+
+        questionRef
+            .collection(`answers`).doc(model.currentAnswer)
+            .set({})
             .then(() => console.log("Answer saved"))
     }
     if (message instanceof NextClick) {
