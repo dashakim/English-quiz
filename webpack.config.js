@@ -3,7 +3,7 @@ let conf = {
     entry: {
         index: './src/pages/index/index.js',
         auth: './src/pages/auth/auth.js',
-        editor:'./src/editor.js'
+        editor:'./src/pages/editor/editor.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),

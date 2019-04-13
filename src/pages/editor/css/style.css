@@ -1,0 +1,73 @@
+body {
+    background-color: #3f3f41;
+    /* margin: 15px */
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+ 
+}
+
+h1 {
+    font-size: 18pt;
+}
+
+.app {
+    display: grid;
+    grid-column-start: 2;
+    color: rgb(245, 245, 245);
+    text-align: center
+}
+
+.answers {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+.answer-button{width: 100%}
+.answer-button,
+.next-button {
+   
+    font-size: 16pt;
+    line-height: 1.499;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #3f3f41;
+    border: 1px solid #ebebeb;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    padding: 10px;
+    font-size: 18px;
+
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.924);
+}
+
+.answer-button:hover,
+.next-button:hover {
+    background-color: rgba(255, 255, 255, 0.924);
+    color: #3f3f41;
+}
+
+.login {
+    display: grid;
+    justify-content: right;
+}
+
+.login-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;    
+}

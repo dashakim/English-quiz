@@ -1,13 +1,13 @@
 import './css/style.css'
-import { generateQuiz } from './quiz'
 import { getElementById, renderTo } from '../../lib/dom'
 import app from './components/app'
-import AnswerClick from './actions/answerClick'
-import NextClick from './actions/nextClick'
 import Started from './actions/started'
 import DataLoaded from './actions/dataLoaded'
 import LoggedIn from './actions/loggedIn'
 import AnonymousLoggedIn from './actions/anonymousLoggedIn'
+import RowHovered from './actions/rowHovered'
+import RowDeleted from './actions/rowDeleted'
+import RowEditClicked from './actions/rowEditClicked'
 
 import { firebase } from "@firebase/app"
 import "@firebase/auth"
@@ -20,25 +20,17 @@ firebase.auth().languageCode = 'en'
 const db = firebase.firestore()
 
 let state = {
-    loading: true,
-    quiz: [],
-    round: 0,
-    hasAnswered: false,
-    currentCorrectAnswer: ``,
-    currentAnswer: ``,
-    counter: 0,
     user: {},
-    placeholder: {}
+    collectionName: 'English quiz',
+    rows: [],
+    currentRow: '1',
+    showEditForm: true,
+    showHover: false,
 }
 
 const update = (signal, model, message) => {
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
-        fetch('/sentences.json')
-            .then(response => response.json())
-            .then(function (result) {
-                signal(new DataLoaded(result))()
-            })
     }
     if (message instanceof AnonymousLoggedIn) {
         window.location.href = '/auth.html'
@@ -48,41 +40,20 @@ const update = (signal, model, message) => {
         model.user.displayName = message.user.displayName
         model.user.photoURL = message.user.photoURL
         model.user.email = message.user.email
+
+        fetch('/sentences.json')
+            .then(response => response.json())
+            .then(function (result) {
+                signal(new DataLoaded(result))()
+            })
     }
     if (message instanceof DataLoaded) {
-        model.quiz = generateQuiz(message.data, 100, 4)
-        model.loading = false
-    }
-    if (message instanceof AnswerClick) {
-        model.hasAnswered = true
-        model.currentCorrectAnswer = message.correctAnswer
-        model.currentAnswer = message.answer
-        if (model.currentAnswer === model.currentCorrectAnswer) {
-            model.counter++
+        for (const key in message.data) {
+            if (message.data.hasOwnProperty(key)) {
+                const element = message.data[key]
+                model.rows.push({ question: key, answer: element })
+            }
         }
-
-        const roundData = model.quiz[model.round]
-        const userRef = db
-            .collection(`users`).doc(model.user.uid)
-
-        const questionRef = userRef
-            .collection(`questions`).doc(roundData.question)
-
-        userRef.set({ name: model.user.displayName, email: model.user.email })
-            .then(() => console.log("User saved"))
-
-        questionRef
-            .set({ correctAnswer: model.currentCorrectAnswer })
-            .then(() => console.log("Question saved"))
-
-        questionRef
-            .collection(`answers`).doc(model.currentAnswer)
-            .set({})
-            .then(() => console.log("Answer saved"))
-    }
-    if (message instanceof NextClick) {
-        model.hasAnswered = false
-        model.round += 1
     }
 
     console.log(`Handled: `, message)
