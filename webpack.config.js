@@ -2,7 +2,7 @@ let path = require('path');
 let conf = {
     entry: {
         index: './src/pages/index/index.js',
-        auth: './src/auth.js',
+        auth: './src/pages/auth/auth.js',
         editor:'./src/editor.js'
     },
     output: {

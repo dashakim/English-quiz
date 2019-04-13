@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/auth.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/auth/auth.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -145,18 +145,6 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./src/auth.js":
-/*!*********************!*\
-  !*** ./src/auth.js ***!
-  \*********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/index.cjs.js\");\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_firebase_app__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/auth */ \"./node_modules/@firebase/auth/dist/auth.esm.js\");\n/* harmony import */ var _firebase_config_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./firebase-config.json */ \"./src/firebase-config.json\");\nvar _firebase_config_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./firebase-config.json */ \"./src/firebase-config.json\", 1);\n\n\n\n_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].initializeApp(_firebase_config_json__WEBPACK_IMPORTED_MODULE_2__);\n_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().languageCode = 'en';\n_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().onAuthStateChanged(function (user) {\n  if (!user) {\n    return _firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().signInWithRedirect(getProvider());\n  } else {\n    _firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().setPersistence(_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth.Auth.Persistence.SESSION).then(function () {\n      window.location.href = '/index.html';\n    });\n  }\n});\n\nvar getProvider = function getProvider() {\n  var result = new _firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth.GoogleAuthProvider();\n  result.addScope('https://www.googleapis.com/auth/contacts.readonly');\n  return result;\n};\n\n//# sourceURL=webpack:///./src/auth.js?");
-
-/***/ }),
-
 /***/ "./src/firebase-config.json":
 /*!**********************************!*\
   !*** ./src/firebase-config.json ***!
@@ -165,6 +153,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fir
 /***/ (function(module) {
 
 eval("module.exports = {\"apiKey\":\"AIzaSyDknHvufVwmnM38bzm6F9ONmv7Zmd_2KUk\",\"authDomain\":\"studyator.com\",\"databaseURL\":\"https://stadyator.firebaseio.com\",\"projectId\":\"stadyator\",\"storageBucket\":\"stadyator.appspot.com\",\"messagingSenderId\":\"337740404088\"};\n\n//# sourceURL=webpack:///./src/firebase-config.json?");
+
+/***/ }),
+
+/***/ "./src/pages/auth/auth.js":
+/*!********************************!*\
+  !*** ./src/pages/auth/auth.js ***!
+  \********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/index.cjs.js\");\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_firebase_app__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/auth */ \"./node_modules/@firebase/auth/dist/auth.esm.js\");\n/* harmony import */ var _firebase_config_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../firebase-config.json */ \"./src/firebase-config.json\");\nvar _firebase_config_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../firebase-config.json */ \"./src/firebase-config.json\", 1);\n\n\n\n_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].initializeApp(_firebase_config_json__WEBPACK_IMPORTED_MODULE_2__);\n_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().languageCode = 'en';\n_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().onAuthStateChanged(function (user) {\n  if (!user) {\n    return _firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().signInWithRedirect(getProvider());\n  } else {\n    _firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth().setPersistence(_firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth.Auth.Persistence.SESSION).then(function () {\n      window.location.href = '/index.html';\n    });\n  }\n});\n\nvar getProvider = function getProvider() {\n  var result = new _firebase_app__WEBPACK_IMPORTED_MODULE_0__[\"firebase\"].auth.GoogleAuthProvider();\n  result.addScope('https://www.googleapis.com/auth/contacts.readonly');\n  return result;\n};\n\n//# sourceURL=webpack:///./src/pages/auth/auth.js?");
 
 /***/ })
 

@@ -1,6 +1,6 @@
 import { firebase } from "@firebase/app"
 import "@firebase/auth"
-import config from './firebase-config.json';
+import config from '../../firebase-config.json';
 
 firebase.initializeApp(config)
 firebase.auth().languageCode = 'en'
