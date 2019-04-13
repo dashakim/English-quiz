@@ -1,4 +1,4 @@
-import { div, button, text } from '../lib/dom'
+import { div, button, text } from '../../../lib/dom'
 
 const choice = (txt, onclick) => {
 

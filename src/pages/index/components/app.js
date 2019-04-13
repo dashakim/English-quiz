@@ -1,4 +1,4 @@
-import { text, div, img } from '../lib/dom'
+import { text, div, img } from '../../../lib/dom'
 import complete from './complete'
 import round from './round'
 

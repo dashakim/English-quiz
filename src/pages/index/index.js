@@ -1,6 +1,6 @@
 import './css/style.css'
 import { generateQuiz } from './quiz'
-import { getElementById, renderTo } from './lib/dom'
+import { getElementById, renderTo } from '../../lib/dom'
 import app from './components/app'
 import AnswerClick from './actions/answerClick'
 import NextClick from './actions/nextClick'
@@ -12,7 +12,7 @@ import AnonymousLoggedIn from './actions/anonymousLoggedIn'
 import { firebase } from "@firebase/app"
 import "@firebase/auth"
 import "@firebase/firestore"
-import config from './firebase-config.json';
+import config from '../../firebase-config.json';
 
 firebase.initializeApp(config)
 firebase.auth().languageCode = 'en'

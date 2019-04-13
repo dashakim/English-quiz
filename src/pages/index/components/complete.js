@@ -1,4 +1,4 @@
-import { h1, text } from '../lib/dom'
+import { h1, text } from '../../../lib/dom'
 
 const complete = () =>
     h1({},

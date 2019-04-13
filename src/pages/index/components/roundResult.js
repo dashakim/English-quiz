@@ -1,4 +1,4 @@
-import { div, text, button, h1 } from '../lib/dom'
+import { div, text, button, h1 } from '../../../lib/dom'
 
 const roundResult = (result, onNext) => {
     return div({ className: `round-result` },

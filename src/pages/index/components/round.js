@@ -1,4 +1,4 @@
-import { br, h1, div, text } from '../lib/dom'
+import { br, h1, div, text } from '../../../lib/dom'
 import question from './question'
 import choices from './choices'
 import roundResult from './roundResult'

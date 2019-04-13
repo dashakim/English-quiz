@@ -1,5 +1,5 @@
-import * as arrays from './lib/arrays'
-import * as random from './lib/random'
+import * as arrays from '../../lib/arrays'
+import * as random from '../../lib/random'
 
 export const generateQuiz = (data, questionsNumber, answersNumber) => {
     let allQuestions = Object.values(data)

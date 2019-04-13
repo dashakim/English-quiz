@@ -14,7 +14,7 @@ h1 {
 
 .app {
     display: grid;
-  grid-column-start: 2;
+    grid-column-start: 2;
     color: rgb(245, 245, 245);
     text-align: center
 }
