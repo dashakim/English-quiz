@@ -158,6 +158,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/pages/_shared/components/userInfo.css":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/pages/_shared/components/userInfo.css ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".login {\\r\\n    display: grid;\\r\\n    justify-content: right;\\r\\n}\\r\\n\\r\\n.login-image {\\r\\n    width: 40px;\\r\\n    height: 40px;\\r\\n    border-radius: 50%;    \\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/pages/_shared/components/userInfo.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/pages/editor/css/style.css":
 /*!******************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/pages/editor/css/style.css ***!
@@ -260,6 +271,40 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/pages/_shared/components/guest.png":
+/*!************************************************!*\
+  !*** ./src/pages/_shared/components/guest.png ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"2e8293835f6be6dddf6619694f1ed2fb.png\";\n\n//# sourceURL=webpack:///./src/pages/_shared/components/guest.png?");
+
+/***/ }),
+
+/***/ "./src/pages/_shared/components/userInfo.css":
+/*!***************************************************!*\
+  !*** ./src/pages/_shared/components/userInfo.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./userInfo.css */ \"./node_modules/css-loader/dist/cjs.js!./src/pages/_shared/components/userInfo.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/pages/_shared/components/userInfo.css?");
+
+/***/ }),
+
+/***/ "./src/pages/_shared/components/userInfo.js":
+/*!**************************************************!*\
+  !*** ./src/pages/_shared/components/userInfo.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _userInfo_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userInfo.css */ \"./src/pages/_shared/components/userInfo.css\");\n/* harmony import */ var _userInfo_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_userInfo_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _guest_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guest.png */ \"./src/pages/_shared/components/guest.png\");\n/* harmony import */ var _guest_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_guest_png__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n\n\n\n\nvar userInfo = function userInfo(user) {\n  var imageProps = user && Object.keys(user).length ? {\n    src: user.photoURL,\n    alt: \"\".concat(user.displayName, \" (\").concat(user.email, \")\"),\n    title: \"\".concat(user.displayName, \" (\").concat(user.email, \")\")\n  } : {\n    src: _guest_png__WEBPACK_IMPORTED_MODULE_1___default.a,\n    alt: \"\",\n    title: \"\"\n  };\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_2__[\"div\"])({\n    className: \"login\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_2__[\"img\"])(Object.assign(imageProps, {\n    className: \"login-image\"\n  })));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (userInfo);\n\n//# sourceURL=webpack:///./src/pages/_shared/components/userInfo.js?");
+
+/***/ }),
+
 /***/ "./src/pages/editor/actions/anonymousLoggedIn.js":
 /*!*******************************************************!*\
   !*** ./src/pages/editor/actions/anonymousLoggedIn.js ***!
@@ -352,7 +397,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(inst
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _actions_rowHovered__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/rowHovered */ \"./src/pages/editor/actions/rowHovered.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n\n\n\nvar app = function app(signal, state) {\n  var loginDetails = state.user ? Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"login\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"img\"])({\n    className: \"login-image\",\n    src: state.user.photoURL,\n    alt: \"\".concat(state.user.displayName, \" (\").concat(state.user.email, \")\"),\n    title: \"\".concat(state.user.displayName, \" (\").concat(state.user.email, \")\")\n  })) : Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])();\n  var rows = state.rows.map(function (r, i) {\n    return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n      onclick: signal(new _actions_rowHovered__WEBPACK_IMPORTED_MODULE_1__[\"default\"](i))\n    }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"[\".concat(i, \"] \").concat(r.question, \": \").concat(r.answer)));\n  });\n  var table = _lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"].apply(void 0, [{\n    className: 'fields'\n  }].concat(_toConsumableArray(rows)));\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, loginDetails, table);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/pages/editor/components/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _actions_rowHovered__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/rowHovered */ \"./src/pages/editor/actions/rowHovered.js\");\n/* harmony import */ var _shared_components_userInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_shared/components/userInfo */ \"./src/pages/_shared/components/userInfo.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n\n\n\n\nvar app = function app(signal, state) {\n  var login = Object(_shared_components_userInfo__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(state.user);\n  var rows = state.rows.map(function (r, i) {\n    return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n      onclick: signal(new _actions_rowHovered__WEBPACK_IMPORTED_MODULE_1__[\"default\"](i))\n    }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"[\".concat(i, \"] \").concat(r.question, \": \").concat(r.answer)));\n  });\n  var table = _lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"].apply(void 0, [{\n    className: 'fields'\n  }].concat(_toConsumableArray(rows)));\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, login, table);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/pages/editor/components/app.js?");
 
 /***/ }),
 

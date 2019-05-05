@@ -1,6 +1,7 @@
 import { text, div, img } from '../../../lib/dom'
 import complete from './complete'
 import round from './round'
+import userInfo from '../../_shared/components/userInfo'
 
 const app = (signal, state) => {
     let result
@@ -23,17 +24,10 @@ const app = (signal, state) => {
             roundData.correсtAnswer)
     }
 
-    let loginDetails = state.user
-        ? div({ className: `login` },
-            img({
-                className: `login-image`,
-                src: state.user.photoURL,
-                alt: `${state.user.displayName} (${state.user.email})`,
-                title: `${state.user.displayName} (${state.user.email})`
-            }))
-        : text()
+    const login = userInfo(state.user)
+   
 
-    return div({ className: `app` }, loginDetails, result)
+    return div({ className: `app` }, login, result)
 }
 
 export default app

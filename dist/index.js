@@ -158,6 +158,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/pages/_shared/components/userInfo.css":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/pages/_shared/components/userInfo.css ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".login {\\r\\n    display: grid;\\r\\n    justify-content: right;\\r\\n}\\r\\n\\r\\n.login-image {\\r\\n    width: 40px;\\r\\n    height: 40px;\\r\\n    border-radius: 50%;    \\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/pages/_shared/components/userInfo.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/pages/index/css/style.css":
 /*!*****************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/pages/index/css/style.css ***!
@@ -165,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n    background-color: #3f3f41;\\n    /* margin: 15px */\\n}\\n.main {\\n    display: grid;\\n    grid-template-columns: 1fr 8fr 1fr;\\n \\n}\\n\\nh1 {\\n    font-size: 18pt;\\n}\\n\\n.app {\\n    display: grid;\\n    grid-column-start: 2;\\n    color: rgb(245, 245, 245);\\n    text-align: center\\n}\\n\\n.answers {\\n    \\n    display: grid;\\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\\n    grid-template-rows: 1fr;\\n    grid-gap: 20px;\\n}\\n.answer-button{width: 100%}\\n.answer-button,\\n.next-button {\\n   \\n    font-size: 16pt;\\n    line-height: 1.499;\\n    font-weight: 600;\\n    white-space: nowrap;\\n    text-align: center;\\n    background-color: #3f3f41;\\n    border: 1px solid #ebebeb;\\n    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    cursor: pointer;\\n    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    -webkit-user-select: none;\\n    -moz-user-select: none;\\n    -ms-user-select: none;\\n    user-select: none;\\n    -ms-touch-action: manipulation;\\n    touch-action: manipulation;\\n    padding: 10px;\\n    font-size: 18px;\\n\\n    border-radius: 5px;\\n    color: rgba(255, 255, 255, 0.924);\\n}\\n\\n.answer-button:hover,\\n.next-button:hover {\\n    background-color: rgba(255, 255, 255, 0.924);\\n    color: #3f3f41;\\n}\\n\\n.login {\\n    display: grid;\\n    justify-content: right;\\n}\\n\\n.login-image {\\n    width: 40px;\\n    height: 40px;\\n    border-radius: 50%;    \\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/pages/index/css/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n    background-color: #3f3f41;\\n    /* margin: 15px */\\n}\\n.main {\\n    display: grid;\\n    grid-template-columns: 1fr 8fr 1fr;\\n \\n}\\n\\nh1 {\\n    font-size: 18pt;\\n}\\n\\n.app {\\n    display: grid;\\n    grid-column-start: 2;\\n    color: rgb(245, 245, 245);\\n    text-align: center\\n}\\n\\n.answers {\\n    \\n    display: grid;\\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\\n    grid-template-rows: 1fr;\\n    grid-gap: 20px;\\n}\\n.answer-button{width: 100%}\\n.answer-button,\\n.next-button {\\n   \\n    font-size: 16pt;\\n    line-height: 1.499;\\n    font-weight: 600;\\n    white-space: nowrap;\\n    text-align: center;\\n    background-color: #3f3f41;\\n    border: 1px solid #ebebeb;\\n    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    cursor: pointer;\\n    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    -webkit-user-select: none;\\n    -moz-user-select: none;\\n    -ms-user-select: none;\\n    user-select: none;\\n    -ms-touch-action: manipulation;\\n    touch-action: manipulation;\\n    padding: 10px;\\n    font-size: 18px;\\n\\n    border-radius: 5px;\\n    color: rgba(255, 255, 255, 0.924);\\n}\\n\\n.answer-button:hover,\\n.next-button:hover {\\n    background-color: rgba(255, 255, 255, 0.924);\\n    color: #3f3f41;\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/pages/index/css/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -284,6 +295,40 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./src/pages/_shared/components/guest.png":
+/*!************************************************!*\
+  !*** ./src/pages/_shared/components/guest.png ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"2e8293835f6be6dddf6619694f1ed2fb.png\";\n\n//# sourceURL=webpack:///./src/pages/_shared/components/guest.png?");
+
+/***/ }),
+
+/***/ "./src/pages/_shared/components/userInfo.css":
+/*!***************************************************!*\
+  !*** ./src/pages/_shared/components/userInfo.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./userInfo.css */ \"./node_modules/css-loader/dist/cjs.js!./src/pages/_shared/components/userInfo.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/pages/_shared/components/userInfo.css?");
+
+/***/ }),
+
+/***/ "./src/pages/_shared/components/userInfo.js":
+/*!**************************************************!*\
+  !*** ./src/pages/_shared/components/userInfo.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _userInfo_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userInfo.css */ \"./src/pages/_shared/components/userInfo.css\");\n/* harmony import */ var _userInfo_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_userInfo_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _guest_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guest.png */ \"./src/pages/_shared/components/guest.png\");\n/* harmony import */ var _guest_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_guest_png__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n\n\n\n\nvar userInfo = function userInfo(user) {\n  var imageProps = user && Object.keys(user).length ? {\n    src: user.photoURL,\n    alt: \"\".concat(user.displayName, \" (\").concat(user.email, \")\"),\n    title: \"\".concat(user.displayName, \" (\").concat(user.email, \")\")\n  } : {\n    src: _guest_png__WEBPACK_IMPORTED_MODULE_1___default.a,\n    alt: \"\",\n    title: \"\"\n  };\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_2__[\"div\"])({\n    className: \"login\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_2__[\"img\"])(Object.assign(imageProps, {\n    className: \"login-image\"\n  })));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (userInfo);\n\n//# sourceURL=webpack:///./src/pages/_shared/components/userInfo.js?");
+
+/***/ }),
+
 /***/ "./src/pages/index/actions/anonymousLoggedIn.js":
 /*!******************************************************!*\
   !*** ./src/pages/index/actions/anonymousLoggedIn.js ***!
@@ -364,7 +409,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(inst
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _complete__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./complete */ \"./src/pages/index/components/complete.js\");\n/* harmony import */ var _round__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./round */ \"./src/pages/index/components/round.js\");\n\n\n\n\nvar app = function app(signal, state) {\n  var result;\n  if (state.loading) result = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"Loading...\");else if (state.round > state.quiz.length - 1) result = Object(_complete__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();else {\n    var roundData = state.quiz[state.round];\n    result = Object(_round__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(signal, state.quiz.length, state.round, roundData.question, roundData.answers, state.hasAnswered, state.currentAnswer, state.currentCorrectAnswer, state.counter, roundData.correсtAnswer);\n  }\n  var loginDetails = state.user ? Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"login\"\n  }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"img\"])({\n    className: \"login-image\",\n    src: state.user.photoURL,\n    alt: \"\".concat(state.user.displayName, \" (\").concat(state.user.email, \")\"),\n    title: \"\".concat(state.user.displayName, \" (\").concat(state.user.email, \")\")\n  })) : Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])();\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, loginDetails, result);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/pages/index/components/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _complete__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./complete */ \"./src/pages/index/components/complete.js\");\n/* harmony import */ var _round__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./round */ \"./src/pages/index/components/round.js\");\n/* harmony import */ var _shared_components_userInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../_shared/components/userInfo */ \"./src/pages/_shared/components/userInfo.js\");\n\n\n\n\n\nvar app = function app(signal, state) {\n  var result;\n  if (state.loading) result = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"Loading...\");else if (state.round > state.quiz.length - 1) result = Object(_complete__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();else {\n    var roundData = state.quiz[state.round];\n    result = Object(_round__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(signal, state.quiz.length, state.round, roundData.question, roundData.answers, state.hasAnswered, state.currentAnswer, state.currentCorrectAnswer, state.counter, roundData.correсtAnswer);\n  }\n  var login = Object(_shared_components_userInfo__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(state.user);\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, login, result);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/pages/index/components/app.js?");
 
 /***/ }),
 
