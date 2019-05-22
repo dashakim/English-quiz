@@ -2,12 +2,10 @@ import './css/style.css'
 import { getElementById, renderTo } from '../../lib/dom'
 import app from './components/app'
 import Started from './actions/started'
-import DataLoaded from './actions/dataLoaded'
+import Save from './actions/save'
+import Saved from './actions/saved'
 import LoggedIn from './actions/loggedIn'
 import AnonymousLoggedIn from './actions/anonymousLoggedIn'
-import RowHovered from './actions/rowHovered'
-import RowDeleted from '../editor/actions/rowDeleted'
-import RowEditClicked from './actions/rowEditClicked'
 
 import { firebase } from "@firebase/app"
 import "@firebase/auth"
@@ -21,16 +19,13 @@ const db = firebase.firestore()
 
 let state = {
     user: {},
-    collectionName: 'English quiz',
-    rows: [],
-    currentRow: '1',
-    showEditForm: true,
-    showHover: false,
+    courseId: 'en',
 }
 
 const update = (signal, model, message) => {
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
+        model.courseId = new URL(window.location).searchParams.get('courseId')
     }
     if (message instanceof AnonymousLoggedIn) {
         window.location.href = '/auth.html'
@@ -41,22 +36,15 @@ const update = (signal, model, message) => {
         model.user.photoURL = message.user.photoURL
         model.user.email = message.user.email
 
-        fetch('/sentences.json')
-            .then(response => response.json())
-            .then(function (result) {
-                signal(new DataLoaded(result))()
-            })
     }
-    if (message instanceof DataLoaded) {
-        for (const key in message.data) {
-            if (message.data.hasOwnProperty(key)) {
-                const element = message.data[key]
-                model.rows.push({ question: key, answer: element })
-            }
-        }
-    }
-    if (message instanceof RowEditClicked){
-        console.log(`Someone clicked on the row number ${message.rowNumber}`)
+    if (message instanceof Save) {
+        const courseRef = db.collection(`courses`).doc(model.courseId)
+
+        courseRef.collection(`questions`).doc(message.question)
+            .set({answer: message.answer})
+            .then(() => 
+                signal(new Saved(message.question, message.answer))()
+            )                
     }
 
     console.log(`Handled: `, message)

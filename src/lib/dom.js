@@ -25,6 +25,20 @@ export const button = (properties, ...inner) => {
     return appendInner(el, inner)
 }
 
+export const input = (properties, ...inner) => {
+    const el = document.createElement(`input`)
+    Object.assign(el, properties)
+
+    return appendInner(el, inner)
+}
+
+export const form = (properties, ...inner) => {
+    const el = document.createElement(`form`)
+    Object.assign(el, properties)
+
+    return appendInner(el, inner)
+}
+
 export const div = (properties, ...inner) => {
     const el = document.createElement(`div`)
     Object.assign(el, properties)

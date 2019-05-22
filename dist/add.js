@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/editor/editor.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/add/add.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -169,14 +169,14 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../../node_module
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/pages/editor/css/style.css":
-/*!******************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/pages/editor/css/style.css ***!
-  \******************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/pages/add/css/style.css":
+/*!***************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/pages/add/css/style.css ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n    background-color: #3f3f41;\\n    /* margin: 15px */\\n}\\n.main {\\n    display: grid;\\n    grid-template-columns: 1fr 8fr 1fr;\\n \\n}\\n\\nh1 {\\n    font-size: 18pt;\\n}\\n\\n.app {\\n    display: grid;\\n    grid-column-start: 2;\\n    color: rgb(245, 245, 245);\\n    text-align: center\\n}\\n\\n.answers {\\n    \\n    display: grid;\\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\\n    grid-template-rows: 1fr;\\n    grid-gap: 20px;\\n}\\n.answer-button{width: 100%}\\n.answer-button,\\n.next-button {\\n   \\n    font-size: 16pt;\\n    line-height: 1.499;\\n    font-weight: 600;\\n    white-space: nowrap;\\n    text-align: center;\\n    background-color: #3f3f41;\\n    border: 1px solid #ebebeb;\\n    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    cursor: pointer;\\n    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    -webkit-user-select: none;\\n    -moz-user-select: none;\\n    -ms-user-select: none;\\n    user-select: none;\\n    -ms-touch-action: manipulation;\\n    touch-action: manipulation;\\n    padding: 10px;\\n    font-size: 18px;\\n\\n    border-radius: 5px;\\n    color: rgba(255, 255, 255, 0.924);\\n}\\n\\n.answer-button:hover,\\n.next-button:hover {\\n    background-color: rgba(255, 255, 255, 0.924);\\n    color: #3f3f41;\\n}\\n\\n.login {\\n    display: grid;\\n    justify-content: right;\\n}\\n\\n.login-image {\\n    width: 40px;\\n    height: 40px;\\n    border-radius: 50%;    \\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/pages/editor/css/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n    background-color: #3f3f41;\\n    /* margin: 15px */\\n}\\n.main {\\n    display: grid;\\n    grid-template-columns: 1fr 8fr 1fr;\\n \\n}\\n\\nh1 {\\n    font-size: 18pt;\\n}\\n\\n.app {\\n    display: grid;\\n    grid-column-start: 2;\\n    color: rgb(245, 245, 245);\\n    text-align: center\\n}\\n\\n.answers {\\n    \\n    display: grid;\\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\\n    grid-template-rows: 1fr;\\n    grid-gap: 20px;\\n}\\n.answer-button{width: 100%}\\n.answer-button,\\n.next-button {\\n   \\n    font-size: 16pt;\\n    line-height: 1.499;\\n    font-weight: 600;\\n    white-space: nowrap;\\n    text-align: center;\\n    background-color: #3f3f41;\\n    border: 1px solid #ebebeb;\\n    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);\\n    cursor: pointer;\\n    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    transition: all .3s cubic-bezier(.645, .045, .355, 1);\\n    -webkit-user-select: none;\\n    -moz-user-select: none;\\n    -ms-user-select: none;\\n    user-select: none;\\n    -ms-touch-action: manipulation;\\n    touch-action: manipulation;\\n    padding: 10px;\\n    font-size: 18px;\\n\\n    border-radius: 5px;\\n    color: rgba(255, 255, 255, 0.924);\\n}\\n\\n.answer-button:hover,\\n.next-button:hover {\\n    background-color: rgba(255, 255, 255, 0.924);\\n    color: #3f3f41;\\n}\\n\\n.login {\\n    display: grid;\\n    justify-content: right;\\n}\\n\\n.login-image {\\n    width: 40px;\\n    height: 40px;\\n    border-radius: 50%;    \\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/pages/add/css/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -305,122 +305,110 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _use
 
 /***/ }),
 
-/***/ "./src/pages/editor/actions/anonymousLoggedIn.js":
-/*!*******************************************************!*\
-  !*** ./src/pages/editor/actions/anonymousLoggedIn.js ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar AnonymousLoggedIn = function AnonymousLoggedIn() {\n  _classCallCheck(this, AnonymousLoggedIn);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AnonymousLoggedIn);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/anonymousLoggedIn.js?");
-
-/***/ }),
-
-/***/ "./src/pages/editor/actions/dataLoaded.js":
-/*!************************************************!*\
-  !*** ./src/pages/editor/actions/dataLoaded.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar DataLoaded = function DataLoaded(data) {\n  _classCallCheck(this, DataLoaded);\n\n  this.data = data;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DataLoaded);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/dataLoaded.js?");
-
-/***/ }),
-
-/***/ "./src/pages/editor/actions/loggedIn.js":
-/*!**********************************************!*\
-  !*** ./src/pages/editor/actions/loggedIn.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar LoggedIn = function LoggedIn(user) {\n  _classCallCheck(this, LoggedIn);\n\n  this.user = user;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (LoggedIn);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/loggedIn.js?");
-
-/***/ }),
-
-/***/ "./src/pages/editor/actions/rowDeleted.js":
-/*!************************************************!*\
-  !*** ./src/pages/editor/actions/rowDeleted.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar RowDeleted = function RowDeleted(rowNumber) {\n  _classCallCheck(this, RowDeleted);\n\n  this.rowNumber = rowNumber;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RowDeleted);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/rowDeleted.js?");
-
-/***/ }),
-
-/***/ "./src/pages/editor/actions/rowEditClicked.js":
+/***/ "./src/pages/add/actions/anonymousLoggedIn.js":
 /*!****************************************************!*\
-  !*** ./src/pages/editor/actions/rowEditClicked.js ***!
+  !*** ./src/pages/add/actions/anonymousLoggedIn.js ***!
   \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar RowEditClicked = function RowEditClicked(rowNumber) {\n  _classCallCheck(this, RowEditClicked);\n\n  this.rowNumber = rowNumber;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RowEditClicked);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/rowEditClicked.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar AnonymousLoggedIn = function AnonymousLoggedIn() {\n  _classCallCheck(this, AnonymousLoggedIn);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AnonymousLoggedIn);\n\n//# sourceURL=webpack:///./src/pages/add/actions/anonymousLoggedIn.js?");
 
 /***/ }),
 
-/***/ "./src/pages/editor/actions/rowHovered.js":
-/*!************************************************!*\
-  !*** ./src/pages/editor/actions/rowHovered.js ***!
-  \************************************************/
+/***/ "./src/pages/add/actions/cancel.js":
+/*!*****************************************!*\
+  !*** ./src/pages/add/actions/cancel.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar RowHovered = function RowHovered(rowNumber) {\n  _classCallCheck(this, RowHovered);\n\n  this.rowNumber = rowNumber;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RowHovered);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/rowHovered.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Cancel = function Cancel() {\n  _classCallCheck(this, Cancel);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Cancel);\n\n//# sourceURL=webpack:///./src/pages/add/actions/cancel.js?");
 
 /***/ }),
 
-/***/ "./src/pages/editor/actions/started.js":
+/***/ "./src/pages/add/actions/dataLoaded.js":
 /*!*********************************************!*\
-  !*** ./src/pages/editor/actions/started.js ***!
+  !*** ./src/pages/add/actions/dataLoaded.js ***!
   \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Started = function Started() {\n  _classCallCheck(this, Started);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Started);\n\n//# sourceURL=webpack:///./src/pages/editor/actions/started.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar DataLoaded = function DataLoaded(data) {\n  _classCallCheck(this, DataLoaded);\n\n  this.data = data;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DataLoaded);\n\n//# sourceURL=webpack:///./src/pages/add/actions/dataLoaded.js?");
 
 /***/ }),
 
-/***/ "./src/pages/editor/components/app.js":
-/*!********************************************!*\
-  !*** ./src/pages/editor/components/app.js ***!
-  \********************************************/
+/***/ "./src/pages/add/actions/loggedIn.js":
+/*!*******************************************!*\
+  !*** ./src/pages/add/actions/loggedIn.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _actions_rowEditClicked__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/rowEditClicked */ \"./src/pages/editor/actions/rowEditClicked.js\");\n/* harmony import */ var _shared_components_userInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_shared/components/userInfo */ \"./src/pages/_shared/components/userInfo.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n\n\n\n\nvar app = function app(signal, state) {\n  var login = Object(_shared_components_userInfo__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(state.user);\n  var rows = state.rows.map(function (r, i) {\n    return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n      onclick: signal(new _actions_rowEditClicked__WEBPACK_IMPORTED_MODULE_1__[\"default\"](i))\n    }, Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"text\"])(\"[\".concat(i, \"] \").concat(r.question, \": \").concat(r.answer)));\n  });\n  var table = _lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"].apply(void 0, [{\n    className: 'fields'\n  }].concat(_toConsumableArray(rows)));\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, login, table);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/pages/editor/components/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar LoggedIn = function LoggedIn(user) {\n  _classCallCheck(this, LoggedIn);\n\n  this.user = user;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (LoggedIn);\n\n//# sourceURL=webpack:///./src/pages/add/actions/loggedIn.js?");
 
 /***/ }),
 
-/***/ "./src/pages/editor/css/style.css":
-/*!****************************************!*\
-  !*** ./src/pages/editor/css/style.css ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/pages/add/actions/save.js":
+/*!***************************************!*\
+  !*** ./src/pages/add/actions/save.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./src/pages/editor/css/style.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/pages/editor/css/style.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Save = function Save(question, answer) {\n  _classCallCheck(this, Save);\n\n  this.question = question;\n  this.answer = answer;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Save);\n\n//# sourceURL=webpack:///./src/pages/add/actions/save.js?");
 
 /***/ }),
 
-/***/ "./src/pages/editor/editor.js":
-/*!************************************!*\
-  !*** ./src/pages/editor/editor.js ***!
-  \************************************/
+/***/ "./src/pages/add/actions/started.js":
+/*!******************************************!*\
+  !*** ./src/pages/add/actions/started.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Started = function Started() {\n  _classCallCheck(this, Started);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Started);\n\n//# sourceURL=webpack:///./src/pages/add/actions/started.js?");
+
+/***/ }),
+
+/***/ "./src/pages/add/add.js":
+/*!******************************!*\
+  !*** ./src/pages/add/add.js ***!
+  \******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/pages/editor/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _components_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/app */ \"./src/pages/editor/components/app.js\");\n/* harmony import */ var _actions_started__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions/started */ \"./src/pages/editor/actions/started.js\");\n/* harmony import */ var _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/dataLoaded */ \"./src/pages/editor/actions/dataLoaded.js\");\n/* harmony import */ var _actions_loggedIn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/loggedIn */ \"./src/pages/editor/actions/loggedIn.js\");\n/* harmony import */ var _actions_anonymousLoggedIn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/anonymousLoggedIn */ \"./src/pages/editor/actions/anonymousLoggedIn.js\");\n/* harmony import */ var _actions_rowHovered__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./actions/rowHovered */ \"./src/pages/editor/actions/rowHovered.js\");\n/* harmony import */ var _actions_rowDeleted__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./actions/rowDeleted */ \"./src/pages/editor/actions/rowDeleted.js\");\n/* harmony import */ var _actions_rowEditClicked__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./actions/rowEditClicked */ \"./src/pages/editor/actions/rowEditClicked.js\");\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/index.cjs.js\");\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_firebase_app__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _firebase_auth__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @firebase/auth */ \"./node_modules/@firebase/auth/dist/auth.esm.js\");\n/* harmony import */ var _firebase_firestore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @firebase/firestore */ \"./node_modules/@firebase/firestore/dist/index.cjs.js\");\n/* harmony import */ var _firebase_firestore__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_firebase_firestore__WEBPACK_IMPORTED_MODULE_12__);\n/* harmony import */ var _firebase_config_json__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../firebase-config.json */ \"./src/firebase-config.json\");\nvar _firebase_config_json__WEBPACK_IMPORTED_MODULE_13___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../firebase-config.json */ \"./src/firebase-config.json\", 1);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n_firebase_app__WEBPACK_IMPORTED_MODULE_10__[\"firebase\"].initializeApp(_firebase_config_json__WEBPACK_IMPORTED_MODULE_13__);\n_firebase_app__WEBPACK_IMPORTED_MODULE_10__[\"firebase\"].auth().languageCode = 'en';\nvar db = _firebase_app__WEBPACK_IMPORTED_MODULE_10__[\"firebase\"].firestore();\nvar state = {\n  user: {},\n  courseId: 'en',\n  collectionName: 'English quiz',\n  rows: [],\n  currentRow: '1',\n  showEditForm: true,\n  showHover: false\n};\n\nvar update = function update(signal, model, message) {\n  if (message instanceof _actions_started__WEBPACK_IMPORTED_MODULE_3__[\"default\"]) {\n    model.placeholder = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_1__[\"getElementById\"])('out');\n    model.courseId = new URL(window.location).searchParams.get('courseId');\n  }\n\n  if (message instanceof _actions_anonymousLoggedIn__WEBPACK_IMPORTED_MODULE_6__[\"default\"]) {\n    window.location.href = '/auth.html';\n  }\n\n  if (message instanceof _actions_loggedIn__WEBPACK_IMPORTED_MODULE_5__[\"default\"]) {\n    model.user.uid = message.user.uid;\n    model.user.displayName = message.user.displayName;\n    model.user.photoURL = message.user.photoURL;\n    model.user.email = message.user.email;\n    var courseRef = db.collection(\"courses\").doc(model.courseId);\n    courseRef.collection(\"questions\").get().then(function (result) {\n      var questions = result.docs.map(function (d) {\n        return {\n          question: d.id,\n          answer: d.data().answer\n        };\n      });\n      signal(new _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_4__[\"default\"](questions))();\n    });\n  }\n\n  if (message instanceof _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_4__[\"default\"]) {\n    model.rows = message.data;\n  }\n\n  if (message instanceof _actions_rowEditClicked__WEBPACK_IMPORTED_MODULE_9__[\"default\"]) {\n    console.log(\"Someone clicked on the row number \".concat(message.rowNumber));\n  }\n\n  console.log(\"Handled: \", message);\n  console.log(model);\n  return model;\n};\n\nvar signal = function signal(action) {\n  return function callback() {\n    state = update(signal, state, action);\n    view(signal, state);\n  };\n};\n\nvar view = function view(signal, model) {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_1__[\"renderTo\"])(model.placeholder)(Object(_components_app__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(signal, model));\n};\n\nwindow.onload = signal(new _actions_started__WEBPACK_IMPORTED_MODULE_3__[\"default\"]());\n_firebase_app__WEBPACK_IMPORTED_MODULE_10__[\"firebase\"].auth().onAuthStateChanged(function (user) {\n  if (!user) {\n    signal(new _actions_anonymousLoggedIn__WEBPACK_IMPORTED_MODULE_6__[\"default\"]())();\n  } else {\n    signal(new _actions_loggedIn__WEBPACK_IMPORTED_MODULE_5__[\"default\"](user))();\n  }\n});\n\n//# sourceURL=webpack:///./src/pages/editor/editor.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/pages/add/css/style.css\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _components_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/app */ \"./src/pages/add/components/app.js\");\n/* harmony import */ var _actions_started__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions/started */ \"./src/pages/add/actions/started.js\");\n/* harmony import */ var _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/dataLoaded */ \"./src/pages/add/actions/dataLoaded.js\");\n/* harmony import */ var _actions_loggedIn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions/loggedIn */ \"./src/pages/add/actions/loggedIn.js\");\n/* harmony import */ var _actions_anonymousLoggedIn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./actions/anonymousLoggedIn */ \"./src/pages/add/actions/anonymousLoggedIn.js\");\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @firebase/app */ \"./node_modules/@firebase/app/dist/index.cjs.js\");\n/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_firebase_app__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _firebase_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @firebase/auth */ \"./node_modules/@firebase/auth/dist/auth.esm.js\");\n/* harmony import */ var _firebase_firestore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @firebase/firestore */ \"./node_modules/@firebase/firestore/dist/index.cjs.js\");\n/* harmony import */ var _firebase_firestore__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_firebase_firestore__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _firebase_config_json__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../firebase-config.json */ \"./src/firebase-config.json\");\nvar _firebase_config_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../firebase-config.json */ \"./src/firebase-config.json\", 1);\n\n\n\n\n\n\n\n\n\n\n\n_firebase_app__WEBPACK_IMPORTED_MODULE_7__[\"firebase\"].initializeApp(_firebase_config_json__WEBPACK_IMPORTED_MODULE_10__);\n_firebase_app__WEBPACK_IMPORTED_MODULE_7__[\"firebase\"].auth().languageCode = 'en';\nvar db = _firebase_app__WEBPACK_IMPORTED_MODULE_7__[\"firebase\"].firestore();\nvar state = {\n  user: {},\n  courseId: 'en',\n  collectionName: 'English quiz',\n  rows: [],\n  currentRow: '1',\n  showEditForm: true,\n  showHover: false\n};\n\nvar update = function update(signal, model, message) {\n  if (message instanceof _actions_started__WEBPACK_IMPORTED_MODULE_3__[\"default\"]) {\n    model.placeholder = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_1__[\"getElementById\"])('out');\n    model.courseId = new URL(window.location).searchParams.get('courseId');\n  }\n\n  if (message instanceof _actions_anonymousLoggedIn__WEBPACK_IMPORTED_MODULE_6__[\"default\"]) {\n    window.location.href = '/auth.html';\n  }\n\n  if (message instanceof _actions_loggedIn__WEBPACK_IMPORTED_MODULE_5__[\"default\"]) {\n    model.user.uid = message.user.uid;\n    model.user.displayName = message.user.displayName;\n    model.user.photoURL = message.user.photoURL;\n    model.user.email = message.user.email;\n    var courseRef = db.collection(\"courses\").doc(model.courseId);\n    courseRef.collection(\"questions\").get().then(function (result) {\n      var questions = result.docs.map(function (d) {\n        return {\n          question: d.id,\n          answer: d.data().answer\n        };\n      });\n      signal(new _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_4__[\"default\"](questions))();\n    });\n  }\n\n  if (message instanceof _actions_dataLoaded__WEBPACK_IMPORTED_MODULE_4__[\"default\"]) {\n    model.rows = message.data;\n  }\n\n  console.log(\"Handled: \", message);\n  console.log(model);\n  return model;\n};\n\nvar signal = function signal(action) {\n  return function callback() {\n    state = update(signal, state, action);\n    view(signal, state);\n  };\n};\n\nvar view = function view(signal, model) {\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_1__[\"renderTo\"])(model.placeholder)(Object(_components_app__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(signal, model));\n};\n\nwindow.onload = signal(new _actions_started__WEBPACK_IMPORTED_MODULE_3__[\"default\"]());\n_firebase_app__WEBPACK_IMPORTED_MODULE_7__[\"firebase\"].auth().onAuthStateChanged(function (user) {\n  if (!user) {\n    signal(new _actions_anonymousLoggedIn__WEBPACK_IMPORTED_MODULE_6__[\"default\"]())();\n  } else {\n    signal(new _actions_loggedIn__WEBPACK_IMPORTED_MODULE_5__[\"default\"](user))();\n  }\n});\n\n//# sourceURL=webpack:///./src/pages/add/add.js?");
+
+/***/ }),
+
+/***/ "./src/pages/add/components/app.js":
+/*!*****************************************!*\
+  !*** ./src/pages/add/components/app.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/dom */ \"./src/lib/dom.js\");\n/* harmony import */ var _actions_cancel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/cancel */ \"./src/pages/add/actions/cancel.js\");\n/* harmony import */ var _actions_save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/save */ \"./src/pages/add/actions/save.js\");\n/* harmony import */ var _shared_components_userInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../_shared/components/userInfo */ \"./src/pages/_shared/components/userInfo.js\");\n\n\n\n\n\nvar app = function app(signal, state) {\n  var login = Object(_shared_components_userInfo__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(state.user);\n  var question = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"input\"])({\n    name: \"question\",\n    type: \"text\",\n    value: \"word\"\n  });\n  var answer = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"input\"])({\n    name: \"answer\",\n    type: \"text\",\n    value: \"definition\"\n  });\n  var save = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"input\"])({\n    type: \"submit\"\n  });\n  var editForm = Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"form\"])({\n    className: 'fields',\n    onsubmit: function onsubmit(f) {\n      return signal(new _actions_save__WEBPACK_IMPORTED_MODULE_2__[\"default\"](f.elements))();\n    }\n  }, question, answer, save);\n  return Object(_lib_dom__WEBPACK_IMPORTED_MODULE_0__[\"div\"])({\n    className: \"app\"\n  }, login, editForm);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/pages/add/components/app.js?");
+
+/***/ }),
+
+/***/ "./src/pages/add/css/style.css":
+/*!*************************************!*\
+  !*** ./src/pages/add/css/style.css ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./src/pages/add/css/style.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/pages/add/css/style.css?");
 
 /***/ })
 
