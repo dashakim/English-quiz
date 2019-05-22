@@ -46,26 +46,6 @@ const update = (signal, model, message) => {
 
         const courseRef = db.collection(`courses`).doc(model.courseId)
 
-        // Initiall load documents
-        // courseRef.set({
-        //     createdBy: model.user.uid,
-        //     name: `English advanced 2`
-        // }).then(() => {
-        //     fetch('/sentences.json')
-        //         .then(response => response.json())
-        //         .then(function (result) {
-        //             for (const key in result) {
-        //                 if (result.hasOwnProperty(key)) {
-        //                     const element = result[key]
-
-        //                     courseRef.collection(`questions`).doc(key).set({answer: element})
-
-        //                     //model.rows.push({ question: key, answer: element })
-        //                 }
-        //             }
-        //         })
-        // })
-
         courseRef.collection(`questions`)
             .get()
             .then(result => {
