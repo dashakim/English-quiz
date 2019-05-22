@@ -55,6 +55,9 @@ const update = (signal, model, message) => {
             }
         }
     }
+    if (message instanceof RowEditClicked){
+        console.log(`Someone clicked on the row number ${message.rowNumber}`)
+    }
 
     console.log(`Handled: `, message)
     console.log(model)
