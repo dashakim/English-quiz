@@ -6,7 +6,7 @@ import DataLoaded from './actions/dataLoaded'
 import LoggedIn from './actions/loggedIn'
 import AnonymousLoggedIn from './actions/anonymousLoggedIn'
 import RowHovered from './actions/rowHovered'
-import RowDeleted from './actions/rowDeleted'
+import RowDeleted from '../editor/actions/rowDeleted'
 import RowEditClicked from './actions/rowEditClicked'
 
 import { firebase } from "@firebase/app"
@@ -21,7 +21,6 @@ const db = firebase.firestore()
 
 let state = {
     user: {},
-    courseId: 'en',
     collectionName: 'English quiz',
     rows: [],
     currentRow: '1',
@@ -32,7 +31,6 @@ let state = {
 const update = (signal, model, message) => {
     if (message instanceof Started) {
         model.placeholder = getElementById('out')
-        model.courseId = new URL(window.location).searchParams.get('courseId')
     }
     if (message instanceof AnonymousLoggedIn) {
         window.location.href = '/auth.html'
@@ -43,41 +41,21 @@ const update = (signal, model, message) => {
         model.user.photoURL = message.user.photoURL
         model.user.email = message.user.email
 
-
-        const courseRef = db.collection(`courses`).doc(model.courseId)
-
-        // Initiall load documents
-        // courseRef.set({
-        //     createdBy: model.user.uid,
-        //     name: `English advanced 2`
-        // }).then(() => {
-        //     fetch('/sentences.json')
-        //         .then(response => response.json())
-        //         .then(function (result) {
-        //             for (const key in result) {
-        //                 if (result.hasOwnProperty(key)) {
-        //                     const element = result[key]
-
-        //                     courseRef.collection(`questions`).doc(key).set({answer: element})
-
-        //                     //model.rows.push({ question: key, answer: element })
-        //                 }
-        //             }
-        //         })
-        // })
-
-        courseRef.collection(`questions`)
-            .get()
-            .then(result => {
-                const questions = result.docs.map(d => ({ question: d.id, answer: d.data().answer }))
-
-                signal(new DataLoaded(questions))()
+        fetch('/sentences.json')
+            .then(response => response.json())
+            .then(function (result) {
+                signal(new DataLoaded(result))()
             })
     }
     if (message instanceof DataLoaded) {
-        model.rows = message.data
+        for (const key in message.data) {
+            if (message.data.hasOwnProperty(key)) {
+                const element = message.data[key]
+                model.rows.push({ question: key, answer: element })
+            }
+        }
     }
-    if (message instanceof RowEditClicked) {
+    if (message instanceof RowEditClicked){
         console.log(`Someone clicked on the row number ${message.rowNumber}`)
     }
 
