@@ -50,7 +50,7 @@ const update = (signal, model, message) => {
         model.user.email = message.user.email
     }
     if (message instanceof DataLoaded) {
-        model.quiz = generateQuiz(message.data, 100, 4)
+        model.quiz = generateQuiz(message.data, 20, 4)
         model.loading = false
     }
     if (message instanceof AnswerClick) {
